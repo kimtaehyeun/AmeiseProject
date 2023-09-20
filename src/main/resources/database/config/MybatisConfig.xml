@@ -9,5 +9,6 @@
   </settings>
   <typeAliases>
   
+  <typeAlias type="com.man.ameise.vo.MemberVO" alias="MemberVO"/>
   </typeAliases>
   </configuration>
