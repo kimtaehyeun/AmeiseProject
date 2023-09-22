@@ -6,184 +6,164 @@
 <html>
 
 <head>
-   <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Subas || Home-3</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <c:import url="../template/common_css.jsp"></c:import>
-    <!-- Favicon -->	
-    <link rel="shortcut icon" type="image/x-icon" href="/js/img/icon/favicon.png">
+   <c:import url="../template/header.jsp"></c:import>
 
     
 
 </head>
 
-<body class="wide-layout">
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->  
+<body data-spy="scroll" data-target=".navbar-collapse">
 
-    <!-- Body main wrapper start -->
-    <div class="wrapper">
 
-        <!-- START HEADER AREA -->
-        <header class="header-area header-wrapper">
-        <c:import url="../template/header.jsp"></c:import>
-        </header>
-        <!-- END HEADER AREA -->
-        
-        <!-- START MOBILE MENU AREA -->
-        <%-- <c:import url="../template/mobileMenuArea.jsp"></c:import> --%>
-        <!-- END MOBILE MENU AREA -->
+        <!-- Preloader -->
 
-        <!-- BREADCRUMBS SETCTION START -->
-        <div class="breadcrumbs-section plr-200 mb-80 section">
-            <div class="breadcrumbs overlay-bg">
+        <c:import url="../template/preloader.jsp"></c:import>
+
+        <!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <!--Home page style-->
+			<c:import url="../template/homePageStyle.jsp"></c:import>
+            <!--Home Sections-->
+
+
+            <!--Home Sections-->
+
+            <section id="hello" class="contact-banner bg-mega">
+                <div class="overlay"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="breadcrumbs-inner">
-                                <h1 class="breadcrumbs-title">Login / Register</h1>
-                                <ul class="breadcrumb-list">
-                                    <li><a href="/index.html">Home</a></li>
-                                    <li>Login / Register</li>
-                                </ul>
+                        <div class="main_home text-center">
+                            <div class="contact_text">
+                                <h1 class="text-white text-uppercase">JOIN</h1>
+                                <ol class="breadcrumb">
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active"><a href="/member/login">Login</a></li>
+                                </ol>
                             </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+
+
+            
+
+
+
+            <!--Contact Us Section-->
+            <section id="contact" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+
+                            <div class="col-md-6 sm-m-top-30">
+                                <form class="" action="subcribe.php">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Name *</label>
+                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Your Email *</label>
+                                                <input id="email" name="email" type="text" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group"> 
+                                                <label>Your Message *</label>
+                                                <textarea class="form-control" rows="6"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact_img">
+                                    <img src="/templates/assets/images/contact-img.png" alt="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section><!--End off Contact Section-->
+
+
+            <!--Company section-->
+
+            <section id="company" class="company bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_company roomy-100 text-center">
+                            <h3 class="text-uppercase">pouseidon.</h3>
+                            <p>7th floor - Palace Building - 221b Walk of Fame - London- United Kingdom</p>
+                            <p>(+84). 123. 456. 789  -  info@poiseidon.lnk</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- BREADCRUMBS SETCTION END -->
+            </section>
 
-        <!-- Start page content -->
-        <div id="page-content" class="page-wrapper section">
 
-            <!-- LOGIN SECTION START -->
-            <div class="login-section mb-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="registered-customers">
-                                <h6 class="widget-title border-left mb-50">REGISTERED CUSTOMERS</h6>
-                                <form action="#">
-                                    <div class="login-account p-30 box-shadow">
-                                        <p>If you have an account with us, Please log in.</p>
-                                        <input type="text" name="name" placeholder="Email Address">
-                                        <input type="password" name="password" placeholder="Password">
-                                        <p><small><a href="#">Forgot our password?</a></small></p>
-                                        <button class="submit-btn-1 btn-hover-1" type="submit">login</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- new-customers -->
-                        <div class="col-lg-6">
-                            <div class="new-customers">
-                                <form action="#">
-                                    <h6 class="widget-title border-left mb-50">NEW CUSTOMERS</h6>
-                                    <div class="login-account p-30 box-shadow">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="First Name">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="last Name">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select">
-                                                    <option value="defalt">country</option>
-                                                    <option value="c-1">Australia</option>
-                                                    <option value="c-2">Bangladesh</option>
-                                                    <option value="c-3">Unitd States</option>
-                                                    <option value="c-4">Unitd Kingdom</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select">
-                                                    <option value="defalt">State</option>
-                                                    <option value="c-1">Melbourne</option>
-                                                    <option value="c-2">Dhaka</option>
-                                                    <option value="c-3">New York</option>
-                                                    <option value="c-4">London</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select">
-                                                    <option value="defalt">Town/City</option>
-                                                    <option value="c-1">Victoria</option>
-                                                    <option value="c-2">Chittagong</option>
-                                                    <option value="c-3">Boston</option>
-                                                    <option value="c-4">Cambridge</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="Phone here...">
-                                            </div>
-                                        </div>
-                                        <input type="text" placeholder="Company neme here...">
-                                        <input type="text" placeholder="Email address here...">
-                                        <input type="password" placeholder="Password">
-                                        <input type="password" placeholder="Confirm Password">
-                                        <div class="checkbox">
-                                            <label class="mr-10"> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Sign up for our newsletter!
-                                                </small>
-                                            </label>
-                                            <label> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Receive special offers from our partners!
-                                                </small>
-                                            </label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <button class="submit-btn-1 mt-20 btn-hover-1" type="submit" value="register">Register</button>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button class="submit-btn-1 mt-20 btn-hover-1 f-right" type="reset">Clear</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- LOGIN SECTION END -->             
+            <!-- scroll up-->
+            <div class="scrollup">
+                <a href="#"><i class="fa fa-chevron-up"></i></a>
+            </div><!-- End off scroll up -->
+
+
+            <c:import url="../template/footer.jsp"></c:import>
+
+
+
 
         </div>
-        <!-- End page content -->
 
-        <!-- START FOOTER AREA -->
-       <%-- <c:import url="../template/footer.jsp"></c:import> --%>
-        <!-- END FOOTER AREA -->
+        <!-- JS includes -->
 
-        <!--style-customizer start -->
-		<%-- <c:import url="../template/styleCustomizer.jsp"></c:import> --%>        
-        <!--style-customizer end -->
-    </div>
-    <!-- Body main wrapper end -->
+        <c:import url="../template/common_js.jsp"></c:import>
+
+        <!-- paradise slider js -->
+
+        <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
+        <script src="assets/js/gmaps.min.js"></script>
+        <script>
+            var map = new GMaps({
+                el: '.ourmap',
+                lat: -12.043333,
+                lng: -77.028333,
+                scrollwheel: false,
+                zoom: 15,
+                zoomControl: true,
+                panControl: false,
+                
+                streetViewControl: false,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                clickable: false,
+                styles: [{'stylers': [{'hue': 'gray'}, {saturation: -100},
+                            {gamma: 0.80}]}]
+            });
+
+        </script> 구글지도 api 카카오맵으로 변경-->
 
 
-    <!-- Placed JS at the end of the document so the pages load faster -->
 
-    
-    <!-- Popper js -->
-    <!-- <script src="js/popper.min.js"></script>
-    Bootstrap framework js
-    <script src="js/bootstrap.min.js"></script>
-    jquery.nivo.slider js
-    <script src="lib/js/jquery.nivo.slider.js"></script>
-    All js plugins included in this file.
-    <script src="js/plugins.js"></script>
-    Main js file that contents all jQuery plugins activation.
-    <script src="js/main.js"></script><a id="scrollUp" href="#top" style="display: none; position: fixed; z-index: 2147483647;"><i class="zmdi zmdi-chevron-up"></i></a>
 
- -->
- <c:import url="../template/common_js.jsp"></c:import>
-
-</body></html>
+    </body>
+    </html>

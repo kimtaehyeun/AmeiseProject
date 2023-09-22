@@ -2,1485 +2,831 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
-<html>
 
-<head>
-<c:import url="./template/common_css.jsp"></c:import>
-</head>
 
-<body>
-	<c:import url="./template/header.jsp"></c:import>
-	<!-- END HEADER AREA -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko"> <!--<![endif]-->
+    <head>
+        <c:import url="./template/header.jsp"></c:import>
+    </head>
 
-	<!-- START MOBILE MENU AREA -->
-	<!-- 없음 -->
-	<!-- END MOBILE MENU AREA -->
+    <body data-spy="scroll" data-target=".navbar-collapse">
 
-	<!-- START SLIDER AREA -->
-	<c:import url="./template/slideArea.jsp"></c:import>
-	<!-- END SLIDER AREA -->
 
-	<!-- Start page content -->
-	<section id="page-content" class="page-wrapper section">
+        <!-- Preloader -->
 
-		<!-- FEATURED PRODUCT SECTION START -->
-		<div class="featured-product-section mb-50">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title text-center mb-50">
-							<h2 class="uppercase">Featured product</h2>
-							<h6>There are many variations of passages of brands
-								available,</h6>
-						</div>
-						<div class="featured-product">
-							<div class="active-featured-product slick-arrow-2">
-								<div class="product-item">
-									<div class="product-img">
-										<a href="single-product.html"> <img
-											src="img/product/1.jpg" alt="" />
-										</a>
-									</div>
-									<div class="product-info">
-										<h6 class="product-title">
-											<a href="single-product.html">Product Name</a>
-										</h6>
-										<div class="pro-rating">
-											<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-outline"></i></a>
-										</div>
-										<h3 class="pro-price">$ 869.00</h3>
+        <c:import url="./template/preloader.jsp"></c:import>
 
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-img">
-										<a href="single-product.html"> <img
-											src="img/product/2.jpg" alt="" />
-										</a>
-									</div>
-									<div class="product-info">
-										<h6 class="product-title">
-											<a href="single-product.html">Product Name</a>
-										</h6>
-										<div class="pro-rating">
-											<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-outline"></i></a>
-										</div>
-										<h3 class="pro-price">$ 869.00</h3>
+        <!--End off Preloader -->
 
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-img">
-										<a href="single-product.html"> <img
-											src="img/product/3.jpg" alt="" />
-										</a>
-									</div>
-									<div class="product-info">
-										<h6 class="product-title">
-											<a href="single-product.html">Product Name</a>
-										</h6>
-										<div class="pro-rating">
-											<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-outline"></i></a>
-										</div>
-										<h3 class="pro-price">$ 869.00</h3>
 
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-img">
-										<a href="single-product.html"> <img
-											src="img/product/4.jpg" alt="" />
-										</a>
-									</div>
-									<div class="product-info">
-										<h6 class="product-title">
-											<a href="single-product.html">Product Name</a>
-										</h6>
-										<div class="pro-rating">
-											<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-outline"></i></a>
-										</div>
-										<h3 class="pro-price">$ 869.00</h3>
+        <div class="culmn">
+            <!--Home page style-->
+			<c:import url="./template/homePageStyle.jsp"></c:import>
+            <!--Home Sections-->
 
-									</div>
-								</div>
-								<div class="product-item">
-									<div class="product-img">
-										<a href="single-product.html"> <img
-											src="img/product/4.jpg" alt="" />
-										</a>
-									</div>
-									<div class="product-info">
-										<h6 class="product-title">
-											<a href="single-product.html">Product Name</a>
-										</h6>
-										<div class="pro-rating">
-											<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-												class="zmdi zmdi-star-outline"></i></a>
-										</div>
-										<h3 class="pro-price">$ 869.00</h3>
+            <section id="hello" class="home bg-mega">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="home_text">
+                                <h4 class="text-white text-uppercase">a new creative studio</h4>
+                                <h1 class="text-white text-uppercase">good design is always in season</h1>
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- FEATURED PRODUCT SECTION END -->
+                                <div class="separator"></div>
 
-		<!-- BY BRAND SECTION START-->
-		<div class="by-brand-section mb-80">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title text-center mb-50">
-							<h2 class="uppercase">By Brands</h2>
-							<h6>There are many variations of passages of brands
-								available,</h6>
-						</div>
-						<div class="by-brand-product">
-							<div class="active-by-brand slick-arrow-2">
-								<div class="brand-item">
-									<div class="single-brand-product">
-										<a href="single-product.html"><img src="img/product/5.jpg"
-											alt=""></a>
-										<h3 class="brand-title text-gray">
-											<a href="#">Brand name</a>
-										</h3>
-									</div>
-								</div>
-								<div class="brand-item">
-									<div class="single-brand-product">
-										<a href="single-product.html"><img src="img/product/6.jpg"
-											alt=""></a>
-										<h3 class="brand-title text-gray">
-											<a href="#">Brand name</a>
-										</h3>
-									</div>
-								</div>
-								<div class="brand-item">
-									<div class="single-brand-product">
-										<a href="single-product.html"><img src="img/product/7.jpg"
-											alt=""></a>
-										<h3 class="brand-title text-gray">
-											<a href="#">Brand name</a>
-										</h3>
-									</div>
-								</div>
-								<div class="brand-item">
-									<div class="single-brand-product">
-										<a href="single-product.html"><img src="img/product/8.jpg"
-											alt=""></a>
-										<h3 class="brand-title text-gray">
-											<a href="#">Brand name</a>
-										</h3>
-									</div>
-								</div>
-								<div class="brand-item">
-									<div class="single-brand-product">
-										<a href="single-product.html"><img src="img/product/8.jpg"
-											alt=""></a>
-										<h3 class="brand-title text-gray">
-											<a href="#">Brand name</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- BY BRAND SECTION END -->
+                                <h5 class=" text-uppercase text-white"><em>One day, the dream will come true with lorem ipsum dolor sit amet, 
+                                        consectetuer adipiscing elit, nummy nibh euismod tincidunt laoreet.</em></h5>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
 
-		<!-- UP COMMING PRODUCT SECTION START -->
-		<div class="up-comming-product-section mb-80">
-			<div class="container">
-				<div class="row">
-					<!-- up-comming-pro -->
-					<div class="col-lg-8">
-						<div class="up-comming-pro gray-bg clearfix">
-							<div class="up-comming-pro-img f-left">
-								<a href="#"> <img src="img/up-comming/1.jpg" alt="">
-								</a>
-							</div>
-							<div class="up-comming-pro-info f-left">
-								<h3>
-									<a href="#">Dummy Product Name</a>
-								</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-									elitest, sed do eiusmod tempor incididunt ut labore et dolores
-									top magna aliqua. Ut enim ad minim veniam, quis nostrud exer
-									citation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. laborum.</p>
-								<div class="up-comming-time"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 d-block d-md-none d-lg-block">
-						<div class="banner-item banner-1">
-							<div class="ribbon-price">
-								<span>$ 896.00</span>
-							</div>
-							<div class="banner-img">
-								<a href="#"><img src="img/banner/1.jpg" alt=""></a>
-							</div>
-							<div class="banner-info">
-								<h3>
-									<a href="#">Product Name</a>
-								</h3>
-								<ul class="banner-featured-list">
-									<li><i class="zmdi zmdi-check"></i><span>Lorem
-											ipsum dolor</span></li>
-									<li><i class="zmdi zmdi-check"></i><span>amet,
-											consectetur</span></li>
-									<li><i class="zmdi zmdi-check"></i><span>adipisicing
-											elitest,</span></li>
-									<li><i class="zmdi zmdi-check"></i><span>eiusmod
-											tempor</span></li>
-									<li><i class="zmdi zmdi-check"></i><span>labore et
-											dolore.</span></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- UP COMMING PRODUCT SECTION END -->
 
-		<!-- PRODUCT TAB SECTION START -->
-		<div class="product-tab-section mb-50">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title text-center mb-0">
-							<h2 class="uppercase">product list</h2>
-							<h6>There are many variations of passages of brands
-								available,</h6>
-						</div>
-						<div class="product-tab pro-tab-menu pro-tab-menu-2 text-center">
-							<!-- Nav tabs -->
-							<ul class="nav">
-								<li><a class="active" href="#popular-product"
-									data-bs-toggle="tab">Popular Products </a></li>
-								<li><a href="#new-arrival" data-bs-toggle="tab">New
-										Arrival</a></li>
-								<li><a href="#best-seller" data-bs-toggle="tab">Best
-										Seller</a></li>
-								<li><a href="#special-offer" data-bs-toggle="tab">Special
-										Offer</a></li>
-							</ul>
-						</div>
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<!-- popular-product start -->
-							<div id="popular-product" class="tab-pane active show"
-								role="tabpanel">
-								<div class="row">
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/7.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+            <!--About Sections-->
+            <section id="feature" class="feature p-top-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_feature">
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/2.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                            <div class="col-md-6 m-top-120">
+                                <!-- Head Title -->
+                                <div class="head_title">
+                                    <h2>From Ocean</h2>
+                                    <h5><em>Pouseidon brings the waves to somewhere so far,
+                                            with beautiful & elegant</em></h5>
+                                    <div class="separator_left"></div>
+                                </div><!-- End off Head Title -->
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/9.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                                <div class="feature_content wow fadeIn m-top-40">
+                                    <p>Eusus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores
+                                        legere me lius quod ii legunt saepius. Duis autem vel eum iriure dolor in hendrerit vulputate
+                                        velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+                                        accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/4.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                                        vel illum dolore feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim</p>
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/10.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                                    <div class="feature_btns m-top-30">
+                                        <a href="" class="btn btn-default text-uppercase">more about us <i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature_photo wow fadeIn sm-m-top-40">
+                                    <div class="photo_border"></div>
+                                    <div class="feature_img">
+                                        <img src="assets/images/feature-img.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+                <br />
+                <br />
+                <br />
+                <br />
+                <hr />
+                <br />
+                <br />
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/11.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_counter text-center">
+                            <div class="col-md-3">
+                                <div class="counter_item">
+                                    <h2 class="statistic-counter"><em> 29 </em></h2>
+                                    <div class="separator_small"></div>
+                                    <h5>Projects Finished</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counter_item sm-m-top-40">
+                                    <h2 class="statistic-counter"><em>124</em></h2>
+                                    <div class="separator_small"></div>
+                                    <h5>Happy Clients</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counter_item sm-m-top-40">
+                                    <h2 class="statistic-counter"><em>76</em></h2>
+                                    <div class="separator_small"></div>
+                                    <h5>Hours of work</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="counter_item sm-m-top-40">
+                                    <h2 class="statistic-counter"><em>500</em> </h2>
+                                    <div class="separator_small"></div>
+                                    <h5>Cup of coffee</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/8.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                <br />
+                <br />
+                <br />
+                <hr />
+                <br />
+                <br />
+                <br />
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/12.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
+                <!--Our Work Section-->
+                <div class="container">
+                    <div class="row">
+                        <div class="main_work">
 
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-								</div>
-							</div>
-							<!-- popular-product end -->
-							<!-- new-arrival start -->
-							<div id="new-arrival" class="tab-pane" role="tabpanel">
-								<div class="row">
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/1.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/3.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/5.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/6.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/12.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/8.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/11.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/10.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-								</div>
-							</div>
-							<!-- new-arrival end -->
-							<!-- best-seller start -->
-							<div id="best-seller" class="tab-pane" role="tabpanel">
-								<div class="row">
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/12.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/11.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/10.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/8.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/1.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/2.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/3.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/4.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-								</div>
-							</div>
-							<!-- best-seller end -->
-							<!-- special-offer start -->
-							<div id="special-offer" class="tab-pane" role="tabpanel">
-								<div class="row">
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/6.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/12.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/1.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/8.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/9.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/7.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/5.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-									<!-- product-item start -->
-									<div class="col-lg-3 col-md-4">
-										<div class="product-item">
-											<div class="product-img">
-												<a href="single-product.html"> <img
-													src="img/product/1.jpg" alt="" />
-												</a>
-											</div>
-											<div class="product-info">
-												<h6 class="product-title">
-													<a href="single-product.html">Product Name</a>
-												</h6>
-												<div class="pro-rating">
-													<a href="#"><i class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-half"></i></a> <a href="#"><i
-														class="zmdi zmdi-star-outline"></i></a>
-												</div>
-												<h3 class="pro-price">$ 869.00</h3>
-
-											</div>
-										</div>
-									</div>
-									<!-- product-item end -->
-								</div>
-							</div>
-							<!-- special-offer end -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- PRODUCT TAB SECTION END -->
-
-		<!-- BLOG SECTION START -->
-		<div class="blog-section mb-50">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title text-center mb-50">
-							<h2 class="uppercase">Latest blog</h2>
-							<h6>There are many variations of passages of brands
-								available,</h6>
-						</div>
-						<div class="blog">
-							<div class="active-blog">
-								<div class="blog-item">
-									<img src="img/blog/1.jpg" alt="">
-									<!-- <div class="blog-desc">
-                                            <h5 class="blog-title"><a href="single-blog.html">dummy Blog name</a></h5>
-                                            <p>There are many variations of passages of psum available, but the majority have suffered alterat on in some form, by injected humour, randomis words which don't look even slightly.</p>
-                                            <div class="read-more">
-                                                <a href="single-blog.html">Read more</a>
+                            <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                                <div class="work_item">
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                            <div class="work_item_img">
+                                                <img src="assets/images/work-img1.jpg" alt="" />
                                             </div>
-                                            <ul class="blog-meta">
-                                                <li>
-                                                    <a href="#"><i class="zmdi zmdi-favorite"></i>89 Like</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="zmdi zmdi-comments"></i>59 Comments</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="zmdi zmdi-share"></i>29 Share</a>
-                                                </li>
-                                            </ul>
-                                        </div> -->
-								</div>
-								<div class="blog-item">
-									<img src="img/blog/2.jpg" alt="">
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                            <div class="work_item_details m-top-80 sm-m-top-20">
+                                                <h4>Fashionista</h4>
+                                                <div class="work_separator1"></div>
+                                                <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off work-item -->
 
-								</div>
-								<div class="blog-item">
-									<img src="img/blog/3.jpg" alt="">
+                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                <div class="work_item">
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12 col-xs-12">
+                                            <div class="work_item_img sm-text-center sm-m-top-40">
+                                                <img src="assets/images/work-img2.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                            <div class="work_item_details m-top-80 sm-m-top-20">
+                                                <h4>Fashionista</h4>
+                                                <div class="work_separator2"></div>
+                                                <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-								</div>
+                                </div>
+                            </div><!-- End off work-item -->
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- BLOG SECTION END -->
-	</section>
-	<!-- End page content -->
+                            <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                                <div class="work_item">
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
+                                            <div class="work_item_img sm-m-top-40">
+                                                <img src="assets/images/work-img3.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
+                                            <div class="work_item_details m-top-80 sm-m-top-20">
+                                                <h4>Fashionista</h4>
+                                                <div class="work_separator1"></div>
+                                                <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off work-item -->
 
-	<!-- START FOOTER AREA -->
-	<footer id="footer" class="footer-area section">
-		<div class="footer-top">
-			<div class="container-fluid">
-				<div class="plr-185">
-					<div class="footer-top-inner theme-bg">
-						<div class="row">
-							<div class="col-xl-4 col-lg-5 col-md-5">
-								<div class="single-footer footer-about">
-									<div class="footer-logo">
-										<img src="img/logo/logo.png" alt="">
-									</div>
-									<div class="footer-brief">
-										<p>Lorem Ipsum is simply dummy text of the printing and
-											typesetting industry. Lorem Ipsum has been the subas
-											industry's standard dummy text ever since the 1500s,</p>
-										<p>When an unknown printer took a galley of type and If
-											you are going to use a passage of Lorem Ipsum scrambled it to
-											make.</p>
-									</div>
-									<ul class="footer-social">
-										<li><a class="facebook" href="" title="Facebook"><i
-												class="zmdi zmdi-facebook"></i></a></li>
-										<li><a class="google-plus" href="" title="Google Plus"><i
-												class="zmdi zmdi-google-plus"></i></a></li>
-										<li><a class="twitter" href="" title="Twitter"><i
-												class="zmdi zmdi-twitter"></i></a></li>
-										<li><a class="rss" href="" title="RSS"><i
-												class="zmdi zmdi-rss"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xl-2 d-block d-xl-block d-lg-none d-md-none">
-								<div class="single-footer">
-									<h4 class="footer-title border-left">Shipping</h4>
-									<ul class="footer-menu">
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>New
-													Products</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Discount
-													Products</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Best
-													Sell Products</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Popular
-													Products</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Manufactirers</span></a>
-										</li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Suppliers</span></a>
-										</li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Special
-													Products</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-3">
-								<div class="single-footer">
-									<h4 class="footer-title border-left">my account</h4>
-									<ul class="footer-menu">
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>My
-													Account</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>My
-													Wishlist</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>My
-													Cart</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Sign
-													In</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Registration</span></a>
-										</li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Check
-													out</span></a></li>
-										<li><a href="#"><i class="zmdi zmdi-circle"></i><span>Oder
-													Complete</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-4">
-								<div class="single-footer">
-									<h4 class="footer-title border-left">Get in touch</h4>
-									<div class="footer-message">
-										<form action="#">
-											<input type="text" name="name"
-												placeholder="Your name here..."> <input type="text"
-												name="email" placeholder="Your email here...">
-											<textarea class="height-80" name="message"
-												placeholder="Your messege here..."></textarea>
-											<button class="submit-btn-1 mt-20 btn-hover-1" type="submit">submit
-												message</button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom black-bg">
-			<div class="container-fluid">
-				<div class="plr-185">
-					<div class="copyright">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="copyright-text">
-									<p class="copy-text">
-										© 2022 <strong>Subas</strong> Made With <i
-											class="zmdi zmdi-favorite" style="color: red;"
-											aria-hidden="true"></i> By <a class="company-name" href="#">
-											<strong> SubasTeam</strong>
-										</a>.
-									</p>
+                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                <div class="work_item">
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12 col-xs-12">
+                                            <div class="work_item_img sm-text-center sm-m-top-40">
+                                                <img src="assets/images/work-img4.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
+                                            <div class="work_item_details m-top-80 sm-m-top-20">
+                                                <h4>Fashionista</h4>
+                                                <div class="work_separator2"></div>
+                                                <p class="m-top-40 sm-m-top-10">Duis autem vel eum iriure dolor in hendrerit in vulputate velit molestie consequat</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-								</div>
-							</div>
-							<div class="col-md-6">
-								<ul class="footer-payment text-end">
-									<li><a href="#"><img src="img/payment/1.jpg" alt=""></a>
-									</li>
-									<li><a href="#"><img src="img/payment/2.jpg" alt=""></a>
-									</li>
-									<li><a href="#"><img src="img/payment/3.jpg" alt=""></a>
-									</li>
-									<li><a href="#"><img src="img/payment/4.jpg" alt=""></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- END FOOTER AREA -->
+                                </div>
+                            </div><!-- End off work-item -->
 
-	<!-- START QUICKVIEW PRODUCT -->
-	<div id="quickview-wrapper">
-		<!-- Modal -->
-		<div class="modal fade" id="productModal" tabindex="-1" role="dialog">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-bs-dismiss="modal"
-							aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="modal-product clearfix">
-							<div class="product-images">
-								<div class="main-image images">
-									<img alt="" src="img/product/quickview.jpg">
-								</div>
-							</div>
-							<!-- .product-images -->
-
-							<div class="product-info">
-								<h1>Aenean eu tristique</h1>
-								<div class="price-box-3">
-									<div class="s-price-box">
-										<span class="new-price">£160.00</span> <span class="old-price">£190.00</span>
-									</div>
-								</div>
-								<a href="single-product-left-sidebar.html" class="see-all">See
-									all features</a>
-								<div class="quick-add-to-cart">
-									<form method="post" class="cart">
-										<div class="numbers-row">
-											<input type="number" id="french-hens" value="3" min="1">
-										</div>
-										<button class="single_add_to_cart_button" type="submit">Add
-											to cart</button>
-									</form>
-								</div>
-								<div class="quick-desc">Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit. Nam fringilla augue nec est
-									tristique auctor. Donec non est at libero.</div>
-								<div class="social-sharing">
-									<div class="widget widget_socialsharing_widget">
-										<h3 class="widget-title-modal">Share this product</h3>
-										<ul class="social-icons clearfix">
-											<li><a class="facebook" href="#" title="Facebook"> <i
-													class="zmdi zmdi-facebook"></i>
-											</a></li>
-											<li><a class="google-plus" href="#" title="Google +">
-													<i class="zmdi zmdi-google-plus"></i>
-											</a></li>
-											<li><a class="twitter" href="#" title="Twitter"> <i
-													class="zmdi zmdi-twitter"></i>
-											</a></li>
-											<li><a class="pinterest" href="#" title="Pinterest">
-													<i class="zmdi zmdi-pinterest"></i>
-											</a></li>
-											<li><a class="rss" href="#" title="RSS"> <i
-													class="zmdi zmdi-rss"></i>
-											</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- .product-info -->
-						</div>
-						<!-- .modal-product -->
-					</div>
-					<!-- .modal-body -->
-				</div>
-				<!-- .modal-content -->
-			</div>
-			<!-- .modal-dialog -->
-		</div>
-		<!-- END Modal -->
-	</div>
-	<!-- END QUICKVIEW PRODUCT -->
-
-	<!--style-customizer start -->
-	<div class="style-customizer closed">
-
-		<div class="clearfix content-chooser">
-			<h3>Layout Options</h3>
-			<p>Which layout option you want to use?</p>
-			<ul class="layoutstyle clearfix">
-				<li class="wide-layout selected" data-style="wide" title="wide">
-					Wide</li>
-				<li class="boxed-layout" data-style="boxed" title="boxed">
-					Boxed</li>
-			</ul>
-			<h3>Color Schemes</h3>
-			<p>Which theme color you want to use? Select from here.</p>
-			<ul class="styleChange clearfix">
-				<li class="skin-default selected" title="skin-default"
-					data-style="skin-default"></li>
-				<li class="skin-green" title="green" data-style="skin-green"></li>
-				<li class="skin-purple" title="purple" data-style="skin-purple"></li>
-				<li class="skin-blue" title="blue" data-style="skin-blue"></li>
-				<li class="skin-cyan" title="cyan" data-style="skin-cyan"></li>
-				<li class="skin-amber" title="amber" data-style="skin-amber"></li>
-				<li class="skin-blue-grey" title="blue-grey"
-					data-style="skin-blue-grey"></li>
-				<li class="skin-teal" title="teal" data-style="skin-teal"></li>
-			</ul>
-			<h3>Background Patterns</h3>
-			<p>Which background pattern you want to use?</p>
-			<ul class="patternChange clearfix">
-				<li class="pattern-1" data-style="pattern-1" title="pattern-1"></li>
-				<li class="pattern-2" data-style="pattern-2" title="pattern-2"></li>
-				<li class="pattern-3" data-style="pattern-3" title="pattern-3"></li>
-				<li class="pattern-4" data-style="pattern-4" title="pattern-4"></li>
-				<li class="pattern-5" data-style="pattern-5" title="pattern-5"></li>
-				<li class="pattern-6" data-style="pattern-6" title="pattern-6"></li>
-				<li class="pattern-7" data-style="pattern-7" title="pattern-7"></li>
-				<li class="pattern-8" data-style="pattern-8" title="pattern-8"></li>
-			</ul>
-			<h3>Background Images</h3>
-			<p>Which background image you want to use?</p>
-			<ul class="patternChange main-bg-change clearfix">
-				<li class="main-bg-1" data-style="main-bg-1" title="Background 1">
-					<img src="images/customizer/bodybg/01.jpg" alt="">
-				</li>
-				<li class="main-bg-2" data-style="main-bg-2" title="Background 2">
-					<img src="images/customizer/bodybg/02.jpg" alt="">
-				</li>
-				<li class="main-bg-3" data-style="main-bg-3" title="Background 3">
-					<img src="images/customizer/bodybg/03.jpg" alt="">
-				</li>
-				<li class="main-bg-4" data-style="main-bg-4" title="Background 4">
-					<img src="images/customizer/bodybg/04.jpg" alt="">
-				</li>
-				<li class="main-bg-5" data-style="main-bg-5" title="Background 5">
-					<img src="images/customizer/bodybg/05.jpg" alt="">
-				</li>
-				<li class="main-bg-6" data-style="main-bg-6" title="Background 6">
-					<img src="images/customizer/bodybg/06.jpg" alt="">
-				</li>
-				<li class="main-bg-7" data-style="main-bg-7" title="Background 7">
-					<img src="images/customizer/bodybg/07.jpg" alt="">
-				</li>
-				<li class="main-bg-8" data-style="main-bg-8" title="Background 8">
-					<img src="images/customizer/bodybg/08.jpg" alt="">
-				</li>
-			</ul>
-			<ul class="resetAll">
-				<li><a class="button button-border button-reset" href="#">Reset
-						All</a></li>
-			</ul>
-		</div>
-	</div>
-	<!--style-customizer end -->
-	</div>
-	<!-- Body main wrapper end -->
+                        </div>
+                    </div>
+                </div>
 
 
-	<!-- Placed JS at the end of the document so the pages load faster -->
 
-	<!-- jquery latest version -->
+                <br />
+                <br />
+                <br />
+                <hr />
+                <br />
+                <br />
+                <br />
 
-	<script src="../template/jquery-migrate-3.3.2.min.js"></script>
-	<!-- Bootstrap framework js -->
-	<script src="../template/bootstrap.bundle.min.js"></script>
-	<!-- jquery.nivo.slider js -->
-	<script src="../template/jquery.nivo.slider.js"></script>
-	<!-- All js plugins included in this file. -->
-	<script src="../template/plugins.js"></script>
-	<!-- Main js file that contents all jQuery plugins activation. -->
-	<script src="../template/main.js"></script>
+                <div class="container">
+                    <div class="row">
 
-</body>
 
+                        <div class="service_content_area">
+                            <!-- Service LEFT SIDE -->
+                            <div class="col-md-4 service_left wow fadeInLeft">
+                                <!-- Service -->
+
+                                <div class="service_items">
+                                    <div class="row">
+
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-leaf"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-9">
+                                            <div class="text-left service_left_text">
+                                                <h4 class="main-color">Perfect Responsive</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- end Single Service item -->
+
+                                <!-- Service -->
+                                <div class="service_items">
+                                    <div class="row">
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-diamond"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-9">
+                                            <div class="text-left service_left_text">
+                                                <h4 class="main-color">Unique Design</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- end Single Service item -->
+
+                                <!-- Service -->
+                                <div class="service_items">
+                                    <div class="row">
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-android"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-9">
+                                            <div class="text-left service_left_text">
+                                                <h4 class="main-color">Clean & Clear</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Single Service item -->
+
+
+                            </div>
+                            <!-- /END Service LEFT -->
+
+                            <!-- PHONE IMAGE -->
+                            <div class="col-md-4 sm-m-top-40 sm-text-center">
+                                <div class="service-img wow bounceIn">
+                                    <img src="assets/images/service-img.png" alt="Architect Img">
+                                </div>
+                            </div>
+
+                            <!-- Service RIGHT -->
+                            <div class="col-md-4 service_right wow fadeInRight sm-m-top-40" >
+
+                                <!-- Service -->
+                                <div class="service_items">
+                                    <div class="row">
+
+                                        <div class="col-xs-9">
+                                            <div class="service_right_text p-l-15 text-right">
+                                                <h4 class="main-color">Easy install</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-cut"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div> <!-- end Single Service item -->
+
+
+
+                                <!-- Service -->
+                                <div class="service_items">
+                                    <div class="row">
+
+                                        <div class="col-xs-9">
+                                            <div class="service_right_text p-l-15 text-right">
+                                                <h4 class="main-color">Premium Support</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-bullhorn"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div><!-- end Single Service item -->  
+
+                                <!-- Service -->
+                                <div class="service_items">
+                                    <div class="row">
+
+
+                                        <div class="col-xs-9">
+                                            <div class="service_right_text p-l-15 text-right">
+                                                <h4 class="main-color">And much more</h4>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- ICON -->
+                                        <div class="col-xs-3">
+                                            <div class="hexagon">
+                                                <div class="about-content">
+                                                    <span class="fa fa-paper-plane"></span>
+                                                </div>    
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- end Single Service item --> 
+
+
+                            </div><!-- /END Service RIGHT -->
+                        </div>
+                    </div> <!--End off row -->
+                </div>
+
+            </section> <!--End off About section -->
+
+
+
+            <!--Gallery Section-->
+            <section id="gallery" class="gallery margin-top-120 bg-grey">
+                <!-- Gallery container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="main-gallery roomy-80">
+                            <div class="col-md-12">
+                                <div class="head_title text-left sm-text-center wow fadeInDown">
+                                    <h2>Our Gallery</h2>
+                                    <h5><em>Some our recent works is here. Discover them now!</em></h5>
+                                    <div class="separator_left"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 m-bottom-60">
+                                <div class="filters-button-group text-right sm-text-center">
+                                    <button class="button is-checked" data-filter="*">View all</button>
+                                    <button class="button" data-filter=".metal">Catwalk</button>
+                                    <button class="button" data-filter=".transition">Advertisement</button>
+                                    <button class="button" data-filter=".alkali">Fashionista</button>
+                                    <button class="button" data-filter=".ar">Model Photo</button>
+                                </div>
+                            </div>
+
+                            <div style="clear: both;"></div>
+
+                            <div class="grid text-center">
+                                <div class="grid-item transition metal ium">
+                                    <img alt="" src="assets/images/porfolio-01.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-01.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+
+                                <div class="grid-item metalloid " >
+                                    <img alt="" src="assets/images/porfolio-02.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-150">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-02.jpg" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+
+                                <div class="grid-item post-transition metal numberGreaterThan50">
+                                    <img alt="" src="assets/images/porfolio-03.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-50">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-03.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+                                
+                                <div class="grid-item alkali ar" >
+                                    <img alt="" src="assets/images/porfolio-06.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-50">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-06.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+
+                                <div class="grid-item post-transition metal ium" >
+                                    <img alt="" src="assets/images/porfolio-04.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-150">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-04.jpg" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+
+
+                                <div class="grid-item metal ar" >
+                                    <img alt="" src="assets/images/porfolio-05.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="assets/images/porfolio-05.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+
+
+
+                            </div>
+
+                            <div style="clear: both;"></div>
+
+                        </div>
+                    </div>
+                </div><!-- Portfolio container end -->
+            </section><!-- End off portfolio section -->
+
+
+
+
+            <!--Testimonial Section-->
+            <section id="testimonial" class="testimonial fix roomy-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_testimonial text-center">
+
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active testimonial_item">
+                                        <div class="col-sm-10 col-sm-offset-1">
+
+                                            <div class="test_authour">
+                                                <img class="img-circle" src="assets/images/test-img.jpg" alt="" />
+                                                <h6 class="m-top-20">Laingockien</h6>
+                                                <h5><em>The most handsome men in the world</em> </h5>
+                                            </div>
+
+                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
+                                                I can say this is the best team that I have ever worked together. 
+                                                All of them are very, very professional and creative, their unbelieved 
+                                                plan made our concept become perfect. I recommend you to try one of
+                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="item testimonial_item">
+                                        <div class="col-sm-10 col-sm-offset-1">
+
+                                            <div class="test_authour">
+                                                <img class="img-circle" src="assets/images/test-img.jpg" alt="" />
+                                                <h6 class="m-top-20">Laingockien</h6>
+                                                <h5><em>The most handsome men in the world</em> </h5>
+                                            </div>
+
+                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
+                                                I can say this is the best team that I have ever worked together. 
+                                                All of them are very, very professional and creative, their unbelieved 
+                                                plan made our concept become perfect. I recommend you to try one of
+                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="item testimonial_item">
+                                        <div class="col-sm-10 col-sm-offset-1">
+
+                                            <div class="test_authour">
+                                                <img class="img-circle" src="assets/images/test-img.jpg" alt="" />
+                                                <h6 class="m-top-20">Laingockien</h6>
+                                                <h5><em>The most handsome men in the world</em> </h5>
+                                            </div>
+
+                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
+                                                I can say this is the best team that I have ever worked together. 
+                                                All of them are very, very professional and creative, their unbelieved 
+                                                plan made our concept become perfect. I recommend you to try one of
+                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="fa fa-long-arrow-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <span class="slash">/</span>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+
+                <br />
+                <br />
+                <br />
+                <hr />
+                <br />
+                <br />
+                <br />
+
+                <div class="container">
+                    <div class="row">
+                        <div class="main_cbrand text-center">
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img src="assets/images/brand-img1.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img src="assets/images/brand-img2.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img class="" src="assets/images/brand-img3.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img src="assets/images/brand-img4.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img src="assets/images/brand-img5.png" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="cbrand_item m-bottom-10">
+                                    <a href=""><img src="assets/images/brand-img1.png" alt="" /></a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section> <!--End off Testimonial section -->
+
+            <!--Models section-->
+
+            <section id="models" class="models bg-grey roomy-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_models text-center">
+                            <div class="col-md-12">
+                                <div class="head_title text-left sm-text-center wow fadeInDown">
+                                    <h2>Our Models</h2>
+                                    <h5><em>The success of Pouseidon is passion and love. Meet them now!</em></h5>
+                                    <div class="separator_left"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img01.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img02.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img03.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img04.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img05.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img06.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item m-top-30">
+                                    <div class="model_img">
+                                        <img src="assets/images/model-img07.jpg" alt="" />
+                                        <div class="model_caption">
+                                            <h5 class="text-white">Angela Baby</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="model_item meet_team m-top-30">
+                                    <a href="">Meet All Them <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </div><!-- End off col-md-3 -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Contact Us Section-->
+            <section id="contact" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+
+                            <div class="col-md-6 sm-m-top-30">
+                                <form class="" action="subcribe.php">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Name *</label>
+                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Your Email *</label>
+                                                <input id="email" name="email" type="text" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group"> 
+                                                <label>Your Message *</label>
+                                                <textarea class="form-control" rows="6"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact_img">
+                                    <img src="assets/images/contact-img.png" alt="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section><!--End off Contact Section-->
+
+
+            <!--Company section-->
+
+            <section id="company" class="company bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_company roomy-100 text-center">
+                            <h3 class="text-uppercase">pouseidon.</h3>
+                            <p>7th floor - Palace Building - 221b Walk of Fame - London- United Kingdom</p>
+                            <p>(+84). 123. 456. 789  -  info@poiseidon.lnk</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- scroll up-->
+            <div class="scrollup">
+                <a href="#"><i class="fa fa-chevron-up"></i></a>
+            </div><!-- End off scroll up -->
+
+
+            <!-- footer -->
+            <c:import url="./template/footer.jsp"></c:import>
+            <!-- footerEnd -->
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <c:import url="./template/common_js.jsp"></c:import>
+
+    </body>
 </html>
