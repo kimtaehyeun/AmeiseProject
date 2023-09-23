@@ -11,11 +11,9 @@ import com.man.ameise.vo.MemberVO;
 @Controller
 public class HomeController {
 
-	@Autowired
-	private MemberService memberService;
+	
 	@GetMapping("/")
 	public ModelAndView home(ModelAndView mv)throws Exception{
-		MemberVO memberVO = memberService.getMemberList();
 		
 		mv.setViewName("index");
 		return mv;

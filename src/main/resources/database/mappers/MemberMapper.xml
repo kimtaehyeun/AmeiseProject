@@ -7,4 +7,45 @@
 	  select * from MEMBER
 	  
 	  </select>
+	  
+	  <select id="getMemberLogin" parameterType="MemberVO"
+		resultMap="getLoginResult">
+		select m.id as m_id, m.employee_id ,m.account_id
+		,m.password ,r.id
+		as r_id, r.name as r_name from `MEMBER` m
+		inner join
+		MEMBERROLE mr
+		on m.id =mr.member_id
+		INNER JOIN
+		`ROLE` r
+		on
+		mr.role_id =r.id
+		where account_id =#{accountId}
+	</select>
+	<!-- 1. Login -->
+	<resultMap type="MemberVO" id="getLoginResult">
+		<id property="id" column="m_id" />
+		<result property="employeeId" column="employee_id" />
+		<result property="accountId" column="account_id" />
+		<result property="password" column="password" />
+		<collection property="roleVOs" javaType="List"
+			ofType="RoleVO">
+			<id property="id" column="r_id" />
+			<result property="name" column="r_name" />
+		</collection>
+	</resultMap>
+	  <insert id="setMemberJoin" parameterType="MemberVO">
+	  
+	  <selectKey keyProperty="id" resultType="Long" order="AFTER">
+			select
+			id from `MEMBER` where id=(SELECT MAX(id) from `MEMBER`)
+		</selectKey>
+	  insert into `MEMBER`(account_id,password,name,phone,marketing,reg_date,update_date,login_date)
+	   VALUES(#{accountId},#{password},#{name},#{phone},#{marketing},now(),now(),now())
+	  </insert>
+	  <insert id="setMemberRole" parameterType="Map">
+		INSERT INTO MEMBERROLE
+		(role_id, member_id)
+		VALUES(#{roleId}, #{memberId})
+	</insert>
   </mapper>

@@ -10,5 +10,6 @@
   <typeAliases>
   
   <typeAlias type="com.man.ameise.vo.MemberVO" alias="MemberVO"/>
+  <typeAlias type="com.man.ameise.vo.RoleVO" alias="RoleVO"/>
   </typeAliases>
   </configuration>
