@@ -18,10 +18,17 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		<!--OAuth 2.0 : 사용자 개인정보와 인증에 대한 책임을 지지 않고 신뢰할 만한 타사 플랫폼에 위임함
+		kakaoAPi-->
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>
+		
+		<!--<dependency>
 		    	<groupId>org.springframework.security</groupId>
 		    	<artifactId>spring-security-taglibs</artifactId>
-			</dependency>
+			</dependency>-->
 			
 			<!--<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -29,10 +36,10 @@
 			<scope>test</scope>
 		</dependency>-->
 			
-			<dependency>
+			<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency>-->
 			
 			
 			
@@ -82,7 +89,6 @@
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
 		     <!-- 버전 삭제, 에러 발생시 버전 적용 -->
-		     
 		</dependency>
 		
 		
