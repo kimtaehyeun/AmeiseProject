@@ -1,5 +1,7 @@
 package com.man.ameise.dao;
 
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.man.ameise.vo.MemberVO;
@@ -8,5 +10,11 @@ import com.man.ameise.vo.MemberVO;
 public interface MemberDAO {
 
 	public MemberVO getMemberList()throws Exception;
+	
+	public int setMemberJoin(MemberVO memberVO)throws Exception;
+	
+	public MemberVO getMemberLogin(MemberVO memberVO)throws Exception;
+	 
+	public int setMemberRole(Map<String, Object> map)throws Exception;
 	
 }
