@@ -11,11 +11,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class MemberVO implements UserDetails,OAuth2User{
 
 	private Long id;
@@ -24,6 +22,8 @@ public class MemberVO implements UserDetails,OAuth2User{
 	private String name;
 	private String phone;
 	private Boolean marketing;
+	private Boolean status;
+	private String joinType;
 	private Timestamp regDate;
 	private Timestamp updateDate;
 	private Timestamp loginDate;
@@ -57,7 +57,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 		// 계정의 만료 여부
 		// true : 만료 안됨
 		// false : 만료 됨, 로그인 안됨
-		return false;
+		return true;
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 		// 계정 잠김 여부
 				// true : 잠기지 않음
 				// false : 잠김, 로그인 안됨
-		return false;
+		return true;
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 		// password 만료 여부
 				// true : 만료 안됨
 				// false : 만료 됨, 로그인 안됨
-		return false;
+		return true;
 	}
 
 	@Override
@@ -84,13 +84,13 @@ public class MemberVO implements UserDetails,OAuth2User{
 		// 계정 사용 여부
 				// true : 계정 활성화
 				// false : 계정 비활성화, 로그인 안됨
-		return false;
+		return this.status;
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.accountId;
 	}
 		
 }

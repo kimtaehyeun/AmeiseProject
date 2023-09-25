@@ -10,8 +10,8 @@
 	  
 	  <select id="getMemberLogin" parameterType="MemberVO"
 		resultMap="getLoginResult">
-		select m.id as m_id, m.employee_id ,m.account_id
-		,m.password ,r.id
+		select m.id as m_id,m.account_id
+		,m.password ,m.status,r.id
 		as r_id, r.name as r_name from `MEMBER` m
 		inner join
 		MEMBERROLE mr
@@ -25,9 +25,9 @@
 	<!-- 1. Login -->
 	<resultMap type="MemberVO" id="getLoginResult">
 		<id property="id" column="m_id" />
-		<result property="employeeId" column="employee_id" />
 		<result property="accountId" column="account_id" />
 		<result property="password" column="password" />
+		<result property="status" column="status" />
 		<collection property="roleVOs" javaType="List"
 			ofType="RoleVO">
 			<id property="id" column="r_id" />
@@ -40,8 +40,8 @@
 			select
 			id from `MEMBER` where id=(SELECT MAX(id) from `MEMBER`)
 		</selectKey>
-	  insert into `MEMBER`(account_id,password,name,phone,marketing,reg_date,update_date,login_date)
-	   VALUES(#{accountId},#{password},#{name},#{phone},#{marketing},now(),now(),now())
+	  insert into `MEMBER`(account_id,password,name,phone,marketing,join_type,reg_date,update_date,login_date,status)
+	   VALUES(#{accountId},#{password},#{name},#{phone},#{marketing},#{joinType},now(),now(),now(),#{status})
 	  </insert>
 	  <insert id="setMemberRole" parameterType="Map">
 		INSERT INTO MEMBERROLE
