@@ -13,12 +13,16 @@ import org.springframework.security.web.SecurityFilterChain;
 import com.man.ameise.security.UserLoginFailHandler;
 import com.man.ameise.security.UserLogoutHandler;
 import com.man.ameise.security.UserSuccessHandler;
+import com.man.ameise.service.MemberSocialService;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 	@Autowired
 	private UserLogoutHandler userLogoutHandler;
+	
+	@Autowired
+	private MemberSocialService memberSocialService;
 	
 	@Bean
 	//public 을 선언하면 default로 바꾸라는 메세지 출력
@@ -52,14 +56,13 @@ public class SecurityConfig {
 //				.permitAll()
 			.antMatchers("/**").permitAll()
 //				.antMatchers("/member/join").permitAll()
-				
-
-				
-				
 				.and()
 			.formLogin()
-				.usernameParameter("accountId")
 				.loginPage("/member/login")
+				.usernameParameter("accountId")
+				//<input name="password">이면 작성안해도됨
+//				.passwordParameter("password")
+				
 //				.defaultSuccessUrl("/")
 				.successHandler(new UserSuccessHandler())
 //				.failureUrl("/member/login")
@@ -75,9 +78,10 @@ public class SecurityConfig {
 				.invalidateHttpSession(true)// 로그아웃 후 세션 초기화 설정
 //				.deleteCookies("JSESSIONID")// 로그아웃 후 쿠기 삭제 설정
 				.permitAll()
-				
-//				.and()
-
+				.and()
+			.oauth2Login() //Social Login 설정
+				.userInfoEndpoint()
+				.userService(memberSocialService);
 //			.sessionManagement()
 //				.maximumSessions(1) //최대 허용 가능한 session 수, -1 : 무제한
 //				.maxSessionsPreventsLogin(false) //false : 이전사용자 세션만료, true: 새로운 사용자 인증 실패
@@ -87,10 +91,10 @@ public class SecurityConfig {
 //			.invalidSessionUrl("/")
 //			.sessionFixation()
 //				.newSession()
-				.and()
-				.exceptionHandling()
-				.accessDeniedPage("/")
-				;
+//				.and()
+//				.exceptionHandling()
+//				.accessDeniedPage("/")
+//				;
 //		httpSecurity
 //		.exceptionHandling()
 //		.accessDeniedHandler(null);

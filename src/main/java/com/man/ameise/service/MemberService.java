@@ -27,7 +27,13 @@ public class MemberService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		MemberVO memberVO = new MemberVO();
 		memberVO.setAccountId(username);
-		return null;
+		try {
+			memberVO = memberDAO.getMemberLogin(memberVO);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return memberVO;
 	}
 	public MemberVO getMemberList()throws Exception {
 		return memberDAO.getMemberList();
@@ -35,6 +41,7 @@ public class MemberService implements UserDetailsService {
 	}
 	public int setMemberJoin(MemberVO memberVO)throws Exception{
 		memberVO.setPassword(passwordEncoder.encode(memberVO.getPassword()));
+		memberVO.setJoinType("Nomal");
 		int result =memberDAO.setMemberJoin(memberVO);
 
 
@@ -45,4 +52,5 @@ public class MemberService implements UserDetailsService {
 		return result;
 		
 	}
+	
 }

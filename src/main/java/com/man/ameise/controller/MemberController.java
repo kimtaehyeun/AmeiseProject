@@ -46,10 +46,6 @@ public class MemberController {
 		}
 		return mv;
 	}
-	@GetMapping("kakaoLogin")
-	public void kakaoLogin(HttpSession session)throws Exception{
-		
-	}
 	//아이디찿기
 	
 	//비밀번호 찾기

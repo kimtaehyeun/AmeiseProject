@@ -60,7 +60,7 @@
 					<div class="main_contact p-top-100">
 
 						<div class="col-md-6 sm-m-top-30">
-							<form class="" action="/member/join" method="post">
+							<form class="" action="/member/login" method="post">
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
@@ -79,7 +79,7 @@
 										<div class="form-group">
 											<!--  <a href="" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a> -->
 											<button class="btn btn-default" type="submit">로그인</button>
-											<button class="btn btn-danger" type="button">카카오 로그인/가입</button>
+											<a class="btn btn-danger" href="/oauth2/authorization/kakao">카카오 로그인/가입</a>
 										</div>
 									</div>
 
