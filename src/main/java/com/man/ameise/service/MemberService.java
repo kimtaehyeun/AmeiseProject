@@ -43,8 +43,11 @@ public class MemberService implements UserDetailsService {
 	public int setMemberJoin(MemberVO memberVO)throws Exception{
 		memberVO.setPassword(passwordEncoder.encode(memberVO.getPassword()));
 		memberVO.setJoinType("Nomal");
+		if(memberVO.getMarketing()==null) {
+			memberVO.setMarketing(false);
+		}
 		int result =memberDAO.setMemberJoin(memberVO);
-
+		
 
 		Map<String, Object> map = new HashMap<>();
 		map.put("roleId", 3);
@@ -65,14 +68,14 @@ public class MemberService implements UserDetailsService {
 		//2. password 일치 검증
 		if(!memberVO.getPassword().equals(memberVO.getPasswordCheck())) {
 			result=true;
-			bindingResult.rejectValue("passwordCheck", "비밀번호를 확인해주세요");
+			bindingResult.rejectValue("passwordCheck", "member.password.notEqual");
 		}
 
 		//3. ID중복 검사
 		MemberVO checkMember = memberDAO.idDuplicateCheck(memberVO);
 		if(checkMember != null) {
 			result=true;
-			bindingResult.rejectValue("accountId", "아이디 중복검사를 해주세요");
+			bindingResult.rejectValue("accountId", "member.id.duplicate");
 		}
 
 		return result;
