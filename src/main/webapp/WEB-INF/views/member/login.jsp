@@ -69,7 +69,7 @@
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<div class="form-group">
+										<div class="form-group"> 
 											<label>비밀번호</label> <input id="" name="password" type="password"
 												class="form-control">
 										</div>

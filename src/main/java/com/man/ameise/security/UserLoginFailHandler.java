@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
@@ -25,9 +26,8 @@ public class UserLoginFailHandler implements AuthenticationFailureHandler {
 		}else if(exception instanceof InternalAuthenticationServiceException) {
 			errorMessage="ID 확인";
 		
-//		}else if(exception instanceof DisabledException) {
-//			errorMessage="유효하지 않은 사용자입니다";
-//			//enabled가 flase인 경우
+		}else if(exception instanceof DisabledException) {
+			errorMessage="유효하지 않은 사용자입니다";
 		}else {
 			errorMessage="로그인 실패";
 		}

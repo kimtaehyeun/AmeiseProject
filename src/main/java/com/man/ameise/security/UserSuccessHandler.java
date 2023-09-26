@@ -21,8 +21,9 @@ public class UserSuccessHandler implements AuthenticationSuccessHandler{
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
 		String remember = request.getParameter("remember");
+		MemberVO memberVO= (MemberVO)authentication.getPrincipal();
 		if(remember != null && remember.equals("remember")) {
-			MemberVO memberVO= (MemberVO)authentication.getPrincipal();
+			memberVO= (MemberVO)authentication.getPrincipal();
 			Cookie cookie = new Cookie("remember", memberVO.getAccountId());
 //			Cookie cookie = new Cookie("remember", authentication.getName());
 			cookie.setMaxAge(60*60*24);
