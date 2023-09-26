@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,12 @@ public class MemberController {
 	}
 	//회원가입
 	@PostMapping("join")
-	public ModelAndView setMemberJoin(ModelAndView mv, MemberVO memberVO)throws Exception{
+	public ModelAndView setMemberJoin(ModelAndView mv, MemberVO memberVO, BindingResult bindingResult)throws Exception{
+		boolean check = memberService.memberCheck(memberVO, bindingResult);
+		if(check) {
+			mv.setViewName("member/join");
+			return mv;
+		}
 		int result = memberService.setMemberJoin(memberVO);
 		mv.setViewName("redirect:/");
 		return mv;

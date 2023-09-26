@@ -7,11 +7,14 @@
 	  select * from MEMBER
 	  
 	  </select>
-	  
+	  <!-- id 중복검사 -->
+	  <select id="idDuplicateCheck" resultType="MemberVO" parameterType="MemberVO">
+		SELECT account_id FROM MEMBER WHERE account_id=#{accountId}
+	</select>
 	  <select id="getMemberLogin" parameterType="MemberVO"
 		resultMap="getLoginResult">
 		select m.id as m_id,m.account_id
-		,m.password ,m.status,r.id
+		,m.password ,m.status,m.join_type,r.id
 		as r_id, r.name as r_name from `MEMBER` m
 		inner join
 		MEMBERROLE mr
@@ -28,14 +31,15 @@
 		<result property="accountId" column="account_id" />
 		<result property="password" column="password" />
 		<result property="status" column="status" />
+		<result property="joinType" column="join_type" />
 		<collection property="roleVOs" javaType="List"
 			ofType="RoleVO">
 			<id property="id" column="r_id" />
 			<result property="name" column="r_name" />
 		</collection>
 	</resultMap>
+	<!-- 일반 회원가입 -->
 	  <insert id="setMemberJoin" parameterType="MemberVO">
-	  
 	  <selectKey keyProperty="id" resultType="Long" order="AFTER">
 			select
 			id from `MEMBER` where id=(SELECT MAX(id) from `MEMBER`)
@@ -43,6 +47,7 @@
 	  insert into `MEMBER`(account_id,password,name,phone,marketing,join_type,reg_date,update_date,login_date,status)
 	   VALUES(#{accountId},#{password},#{name},#{phone},#{marketing},#{joinType},now(),now(),now(),#{status})
 	  </insert>
+	  <!-- member별 ROLE추가 -->
 	  <insert id="setMemberRole" parameterType="Map">
 		INSERT INTO MEMBERROLE
 		(role_id, member_id)

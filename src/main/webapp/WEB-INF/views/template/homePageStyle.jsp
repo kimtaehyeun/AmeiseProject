@@ -73,7 +73,9 @@
                             <li><a href="model.html">our models</a></li> 							
                             <li><a href="blog.html">blog</a></li>                                    
                             <li><a href="/member/join">join</a></li> 
-                            <li><a href="/member/login">login</a></li>                    
+                            <li><a href="/member/login">login</a></li> 
+                            <li><a href="/member/logout">logout</a></li> 
+                                               
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>  

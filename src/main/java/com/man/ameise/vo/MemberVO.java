@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,8 +19,14 @@ import lombok.Data;
 public class MemberVO implements UserDetails,OAuth2User{
 
 	private Long id;
+	@NotBlank
 	private String accountId;
+	@NotBlank
 	private String password;
+	
+	
+	private String passwordCheck;
+	
 	private String name;
 	private String phone;
 	private Boolean marketing;
