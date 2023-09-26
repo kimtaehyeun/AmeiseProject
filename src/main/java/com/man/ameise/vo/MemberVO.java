@@ -24,7 +24,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 	@NotBlank
 	private String password;
 	
-	
+	@NotBlank
 	private String passwordCheck;
 	
 	private String name;

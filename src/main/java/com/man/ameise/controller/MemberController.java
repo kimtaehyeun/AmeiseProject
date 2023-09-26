@@ -1,11 +1,13 @@
 package com.man.ameise.controller;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,12 +25,15 @@ public class MemberController {
 	
 	
 	@GetMapping("join")
-	public void setMemberJoin(ModelAndView mv) {
+	public ModelAndView setMemberJoin(@ModelAttribute MemberVO memberVO) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("member/join");
 		
+		return mv;
 	}
 	//회원가입
 	@PostMapping("join")
-	public ModelAndView setMemberJoin(ModelAndView mv, MemberVO memberVO, BindingResult bindingResult)throws Exception{
+	public ModelAndView setMemberJoin(ModelAndView mv, @Valid MemberVO memberVO, BindingResult bindingResult)throws Exception{
 		boolean check = memberService.memberCheck(memberVO, bindingResult);
 		if(check) {
 			mv.setViewName("member/join");

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!doctype html>
 
 <html>
@@ -60,30 +61,41 @@
 					<div class="main_contact p-top-100">
 
 						<div class="col-md-6 sm-m-top-30">
-							<form class="" action="/member/join" method="post">
+							 <form:form action="./join" cssClass="contact1-form" modelAttribute="memberVO">
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
-											<label>이메일계정</label> <input id="" name="accountId"
-												type="text" class="form-control" placeholder="이메일계정을 입력해주세요">
+											<form:input cssClass="form-control" id="accountId" path="accountId"   placeholder="이메일계정을 입력해주세요" data-sb-validations="required" />
+	                                        <form:label path="accountId">이메일계정</form:label>
+	                                        <form:errors path="accountId"></form:errors>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<form:password cssClass="form-control" id="password" path="password" data-sb-validations="required" />
+	                                        <form:label path="password">Password</form:label>
+	                                        <form:errors path="password"></form:errors>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<form:password cssClass="form-control" id="passwordCheck" path="passwordCheck" data-sb-validations="required" placeholder="비밀번호 확인"/>
+	                                        <form:label path="passwordCheck">PasswordCheck</form:label>
+	                                        <form:errors path="passwordCheck"></form:errors>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>비밀번호</label> <input id="" name="password" type="password"
-												class="form-control">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label>이름</label> <input id="" name="name" type="text"
-												class="form-control">
+											<form:input cssClass="form-control" id="name" path="name" data-sb-validations="required" />
+	                                        <form:label path="name">Name</form:label>
+	                                        <form:errors path="name"></form:errors>
 										</div>
 									</div>
 									<div class="col-sm-8">
 										<div class="form-group">
-											<label>전화번호</label> <input id="" name="phone" type="text"
-												class="form-control">
+											<form:input cssClass="form-control" id="phone" path="phone" data-sb-validations="required" />
+	                                        <form:label path="phone">phone</form:label>
+	                                        <form:errors path="phone"></form:errors>
 										</div>
 									</div>
 									<div class="col-sm-4">
@@ -103,7 +115,7 @@
 
 								</div>
 
-							</form>
+							</form:form>
 						</div>
 
 						<div class="col-md-6">
