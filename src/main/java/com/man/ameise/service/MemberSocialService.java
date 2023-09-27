@@ -63,7 +63,7 @@ public class MemberSocialService extends DefaultOAuth2UserService{
 		//임시방편 선택사항 카카오계정-email내역을 아이디로 설정
 		m= (HashMap<String,Object>) map.get("kakao_account");
 		memberVO.setAccountId(m.get("email").toString());
-		
+		memberVO.setEMail(m.get("email").toString());
 		//DB 조회
 		//같은 아이디의 계정이 있다면 
 		MemberVO tempVO = new MemberVO();
