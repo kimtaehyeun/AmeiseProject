@@ -29,6 +29,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 	
 	private String name;
 	private String phone;
+	private String eMail;
 	private Boolean marketing;
 	private Boolean status;
 	private String joinType;
