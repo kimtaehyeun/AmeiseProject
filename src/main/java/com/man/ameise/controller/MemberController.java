@@ -101,6 +101,7 @@ public class MemberController {
     @ResponseBody  
     public boolean CheckMail(String key, String insertKey,String email) throws Exception {
         insertKey = SHA256Util.getEncrypt(insertKey, email);
+        
         if(key.equals(insertKey)) {
         	return true;
         }

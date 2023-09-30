@@ -14,7 +14,7 @@ import com.man.ameise.vo.MemberVO;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+
 public class UserSuccessHandler implements AuthenticationSuccessHandler{
 
 	@Override
@@ -25,7 +25,7 @@ public class UserSuccessHandler implements AuthenticationSuccessHandler{
 		if(remember != null && remember.equals("remember")) {
 			memberVO= (MemberVO)authentication.getPrincipal();
 			Cookie cookie = new Cookie("remember", memberVO.getAccountId());
-//			Cookie cookie = new Cookie("remember", authentication.getName());
+			//Cookie cookie = new Cookie("remember", authentication.getName());
 			cookie.setMaxAge(60*60*24);
 			response.addCookie(cookie);
 		}else {
@@ -41,7 +41,7 @@ public class UserSuccessHandler implements AuthenticationSuccessHandler{
 
 		response.sendRedirect("/");
 	}
-	
-	
+
+
 
 }
