@@ -23,82 +23,81 @@ import com.man.ameise.vo.BoardFileVO;
 
 @Component
 public class FileManager extends AbstractView {
-	
+
 	@Value("${app.upload}")
+	//	D:/result/upload/ 업로드 경로
 	private String path;
-	
+
 	@Override
+//	서버-> 클라이언트로 파일 다운로드
 	protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		
+
 		BoardFileVO boardFileVO = (BoardFileVO)model.get("boardFileVO");
-		 
+
 		String board = (String)model.get("board");
-		
+
 		File file = new File(path+board, boardFileVO.getFileName());
-		 
+
 		//한글 처리
 		response.setCharacterEncoding("UTF-8");
-		 
+
 		//총 파일의 크기
 		response.setContentLengthLong(file.length());
-		 
+
 		//다운로드시 파일의 이름을 인코딩
 		String oriName = URLEncoder.encode(boardFileVO.getOriName(), "UTF-8");
-		 
+
 		//header 설정
 		response.setHeader("Content-Disposition", "attachment;filename=\""+oriName+"\"");
 		response.setHeader("Content-Transfer-Encoding", "binary");
-		 
+
 		//HDD에서 파일을 읽고
 		FileInputStream fi = new FileInputStream(file);
 		//Client 로 전송 준비
 		OutputStream os = response.getOutputStream();
-		 
+
 		//전송
 		FileCopyUtils.copy(fi, os);
-		 
+
 		//자원 해제
 		os.close();
 		fi.close();
 	}
-	
+//클라이언트-> 서버 파일 저장
 	public String saveFile(String path, MultipartFile multipartFile) throws Exception {
-		
+
 		File file = new File(path);
-		
+
 		if(!file.exists()) {
 			file.mkdirs();
 		}
-//		
-		   //2. 저장할 파일명 생성
-	    String fileName = UUID.randomUUID().toString();
-	    fileName=fileName+"_"+multipartFile.getOriginalFilename();
-		
-		
+		//		
 		//2. 저장할 파일명 생성
-	  
-		
-		
+		String fileName = UUID.randomUUID().toString();
+		fileName=fileName+"_"+multipartFile.getOriginalFilename();
+
+
+		//2. 저장할 파일명 생성
 		file = new File(file, fileName);
-		
+
 		multipartFile.transferTo(file);
-		
+
 		return fileName;
 	}
-	
+
 	public String saveFile2(String path, MultipartFile multipartFile) throws Exception {
-		
+
 		File file = new File(path);
-		
+
 		if(!file.exists()) {
 			file.mkdirs();
 		}
 
 		file = new File(file, multipartFile.getOriginalFilename());
-		
+
 		multipartFile.transferTo(file);
-		
+
 		return multipartFile.getOriginalFilename();
 	}
 }
