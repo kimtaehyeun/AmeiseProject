@@ -9,12 +9,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 
 import com.man.ameise.dao.MemberDAO;
 import com.man.ameise.vo.MemberVO;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class MemberService implements UserDetailsService {
 
 	@Autowired
