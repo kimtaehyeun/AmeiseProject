@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.man.ameise.dao.MemberDAO;
 import com.man.ameise.vo.MemberVO;
@@ -25,6 +26,7 @@ import java.util.UUID;
 
 @Service
 @Slf4j
+@Transactional(rollbackFor = Exception.class)
 public class MemberSocialService extends DefaultOAuth2UserService{
 
 	
