@@ -7,9 +7,23 @@
   <!-- 카멜 케이스 VO 매핑 -->       
   <setting name="mapUnderscoreToCamelCase" value="true"/>
   </settings>
+  <!-- 별칭 설정 -->
   <typeAliases>
   
   <typeAlias type="com.man.ameise.vo.MemberVO" alias="MemberVO"/>
   <typeAlias type="com.man.ameise.vo.RoleVO" alias="RoleVO"/>
+  
+  <!-- product -->
+  <typeAlias type="com.man.ameise.vo.ProductVO" alias="ProductVO"/>
+  <typeAlias type="com.man.ameise.vo.RealProductVO" alias="RealProductVO"/>
+  <typeAlias type="com.man.ameise.vo.ProductFilesVO" alias="ProductFilesVO"/>
+  <typeAlias type="com.man.ameise.vo.OtherFilesVO" alias="OtherFilesVO"/>
+  <typeAlias type="com.man.ameise.vo.DivisionVO" alias="DivisionVO"/>
+  <typeAlias type="com.man.ameise.vo.CategoryVO" alias="CategoryVO"/>
+  
+  
+  
+  
+  
   </typeAliases>
   </configuration>
