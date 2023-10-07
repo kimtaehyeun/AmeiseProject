@@ -18,4 +18,11 @@ public class HomeController {
 		mv.setViewName("index");
 		return mv;
 	}
+	@GetMapping("/admin")
+	//어드민 홈페이지
+	public ModelAndView adminHome(ModelAndView mv)throws Exception{
+		
+		mv.setViewName("admin/home");
+		return mv;
+	}
 }

@@ -74,62 +74,62 @@
 
                             <div class="grid models text-center">
                                 <div class="grid-item model-item transition metal ium">
-                                    <img alt="" src="assets/images/model/1.jpg">
+                                    <img alt="" src="/templates/assets/images/model/1.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item metalloid " >
-                                    <img alt="" src="assets/images/model/2.jpg">
+                                    <img alt="" src="/templates/assets/images/model/2.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item post-transition metal">
-                                    <img alt="" src="assets/images/model/3.jpg">
+                                    <img alt="" src="/templates/assets/images/model/3.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item post-transition metal ium" >
-                                    <img alt="" src="assets/images/model/4.jpg">
+                                    <img alt="" src="/templates/assets/images/model/4.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item metal ar" >
-                                    <img alt="" src="assets/images/model/5.jpg">
+                                    <img alt="" src="/templates/assets/images/model/5.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/6.jpg">
+                                    <img alt="" src="/templates/assets/images/model/6.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/7.jpg">
+                                    <img alt="" src="/templates/assets/images/model/7.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/8.jpg">
+                                    <img alt="" src="/templates/assets/images/model/8.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/9.jpg">
+                                    <img alt="" src="/templates/assets/images/model/9.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/10.jpg">
+                                    <img alt="" src="/templates/assets/images/model/10.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/11.jpg">
+                                    <img alt="" src="/templates/assets/images/model/11.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" >
-                                    <img alt="" src="assets/images/model/12.jpg">
+                                    <img alt="" src="/templates/assets/images/model/12.jpg">
 									<a href="model-details.html" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
                             </div>
