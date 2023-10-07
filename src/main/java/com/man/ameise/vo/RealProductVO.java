@@ -9,6 +9,8 @@ public class RealProductVO {
 
 	private Long id;
 	private Long productId;
+	private Long surcharge;
+	
 	private String optionName1;
 	private String optionCode1;
 	private String optionName2;
