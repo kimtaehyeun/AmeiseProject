@@ -1,5 +1,7 @@
 package com.man.ameise.vo;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
@@ -9,4 +11,6 @@ public class CategoryVO {
 	private Long id;
 	private Long parentId;
 	private String title;
+	
+	private List<CategoryVO> categoryVOs;
 }
