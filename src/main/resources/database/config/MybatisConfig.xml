@@ -6,10 +6,17 @@
   <settings>
   <!-- 카멜 케이스 VO 매핑 -->       
   <setting name="mapUnderscoreToCamelCase" value="true"/>
+  
+  <!-- 캐싱 설정  -->
+  <!-- <setting name="cacheEnabled" value="false" /> -->
+  <!-- mybatis null 허용 -->
+  <setting name="jdbcTypeForNull" value="NULL" />
   </settings>
   <!-- 별칭 설정 -->
-  <typeAliases>
   
+  
+  <typeAliases>
+  <!-- member  -->
   <typeAlias type="com.man.ameise.vo.MemberVO" alias="MemberVO"/>
   <typeAlias type="com.man.ameise.vo.RoleVO" alias="RoleVO"/>
   
