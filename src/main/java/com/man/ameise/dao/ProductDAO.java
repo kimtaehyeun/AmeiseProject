@@ -19,4 +19,7 @@ public interface ProductDAO {
 	
 	public int setCategoryInsert(CategoryVO categoryVO)throws Exception;
 	
+	public CategoryVO getCategoryDetail(CategoryVO categoryVO)throws Exception;
+	
+	public int setCategoryDelete(CategoryVO categoryVO)throws Exception;
 }

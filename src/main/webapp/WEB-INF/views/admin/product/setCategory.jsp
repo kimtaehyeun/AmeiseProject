@@ -27,7 +27,8 @@
 											<ol class="list-group list-group-numbered">
 												<c:forEach items="${categoryList }" var="categoryVO">
 													<li
-														class="list-group-item d-flex justify-content-between align-items-start">
+														class="categorys list-group-item d-flex justify-content-between align-items-start"
+														data-id="${categoryVO.id }">
 														<div class="ms-2 me-auto">
 															<div class="fw-bold">${categoryVO.title }</div>
 
@@ -42,9 +43,9 @@
 													</li>
 
 												</c:forEach>
-												
+
 											</ol>
-											
+
 										</div>
 										<div class="col-6">
 											<c:forEach items="${categoryList }" var="categoryVO">
@@ -57,7 +58,7 @@
 																<c:forEach items="${categoryVO.categoryVOs }"
 																	var="childVO">
 
-																	<li>
+																	<li class="categorys" data-id="${childVO.id }">
 																		<div class="ms-2 me-auto">
 																			<div class="fw-bold">${childVO.title }</div>
 
@@ -92,8 +93,24 @@
 							<div class="card mb-4">
 								<div class="card-body">
 									<div class="mb-3">
-										<label for="name" class="form-label"></label> <input
-											type="text" class="form-control" id="name">
+										<form id="categorySettingForm" action="/admin/setCategory" method="post">
+										<input type="hidden" id="categoryId">
+											<div class="mb-3">
+												<label for="categorytitle" class="form-label">분류 명</label> <input
+													type="text" class="form-control" id="categorytitle">
+											</div>
+											<div class="mb-3">
+												<label for="categoryurl" class="form-label">url 명</label> <input
+													type="text" class="form-control" id="categoryurl">
+											</div>
+											<div class="form-check form-switch">
+												<label for="categorystatus" class="form-label">진열상태</label>
+												 <input class="form-check-input" type="checkbox" role="switch" id="categorystatus">
+											</div>
+											
+
+
+										</form>
 									</div>
 								</div>
 							</div>

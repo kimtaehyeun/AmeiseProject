@@ -39,7 +39,19 @@ public class ProductService {
 	}
 	public int setCategoryInsert(CategoryVO categoryVO)throws Exception{
 		categoryVO.setStatus(true);
-		categoryVO.setParentId(2L);
+		
 		return productDAO.setCategoryInsert(categoryVO);
+	}
+	public CategoryVO getCategoryDetail(CategoryVO categoryVO)throws Exception{
+		return productDAO.getCategoryDetail(categoryVO);
+		
+	}
+	public int setCategoryDelete(CategoryVO categoryVO)throws Exception{
+//		하위카테고리 모두삭제
+		if(categoryVO.getParentId()!=null) {
+			productDAO.setCategoryDelete(categoryVO);
+			categoryVO.setParentId(null);
+		}
+		return productDAO.setCategoryDelete(categoryVO);
 	}
 }

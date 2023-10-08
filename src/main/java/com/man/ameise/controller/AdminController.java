@@ -29,7 +29,7 @@ public class AdminController {
 	}
 
 	//상품추가페이지
-	//페이지에 필요한 정보 1. 카테고리, 
+	//페이지에 필요한 정보 1. 카테고리 
 	
 	@GetMapping("addProduct")
 	public ModelAndView addProduct(ModelAndView mv)throws Exception{
@@ -56,11 +56,21 @@ public class AdminController {
 	@PostMapping("setCategory")
 	@ResponseBody
 	public int setCategory(ModelAndView mv, CategoryVO categoryVO)throws Exception{
-//		List<CategoryVO> list =productService.getCategoryList();
-//		mv.addObject("categoryList", list);
 		return productService.setCategoryInsert(categoryVO);
 		
 	}
-	
+//	ajax
+	@GetMapping("getCategoryDetail")
+	@ResponseBody
+	public CategoryVO getCategoryDetail(CategoryVO categoryVO)throws Exception{
+		return productService.getCategoryDetail(categoryVO);
+		
+	}
+//	ajax
+	@PostMapping("setCategoryDelete")
+	@ResponseBody
+	public int setCategoryDelete(CategoryVO categoryVO)throws Exception{
+		return productService.setCategoryDelete(categoryVO);
+	}
 	
 }
