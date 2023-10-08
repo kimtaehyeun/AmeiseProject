@@ -23,8 +23,10 @@
 	 <!-- 카테고리 -->
 	 <select id="getCategoryList" resultType="CategoryVO">
 	 SELECT * from CATEGORY
+	 order by  parent_id ASC , step ASC
+	 <!-- LEVEL0부터 출력하기 위해 -->
 	 </select>
 	 <insert id="setCategoryInsert" parameterType="CategoryVO">
-	 INSERT INTO CATEGORY(parent_id,title) VALUES(#{parentId},#{title})
+	 INSERT INTO CATEGORY(parent_id,title,status,step) VALUES(#{parentId},#{title}#{status},#{step})
 	 </insert>
   </mapper>
