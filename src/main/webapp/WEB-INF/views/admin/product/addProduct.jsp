@@ -17,7 +17,7 @@
 
 					<div class="card mb-4">
 						<div class="card-body mb-4">
-<h3>카테고리</h3>
+							<h3>카테고리</h3>
 							<c:forEach items="${categoryList}" var="categoryVO">
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="checkbox"

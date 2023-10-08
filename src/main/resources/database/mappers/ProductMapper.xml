@@ -2,29 +2,66 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.man.ameise.dao.ProductDAO">
-	 
-	 
-	 <insert id="setProductAdd" parameterType="ProductVO">
-		 <selectKey keyProperty="id" resultType="Long" order="AFTER">
-				SELECT MAX(id) from PRODUCT
+<mapper namespace="com.man.ameise.dao.ProductDAO">
+
+
+	<insert id="setProductAdd" parameterType="ProductVO">
+		<selectKey keyProperty="id" resultType="Long" order="AFTER">
+			SELECT MAX(id) from PRODUCT
 		</selectKey>
-	 INSERT INTO PRODUCT (name,code,description,tag,info,reg_date,update_date,price,discount,option1,option2,option3,status)
+		INSERT INTO PRODUCT
+		(name,code,description,tag,info,reg_date,update_date,price,discount,option1,option2,option3,status)
 		VALUES(#{name},#{code},#{description},#{tag},#{info},#{regDate},#{updateDate},#{price},#{discount},#{option1},#{option2},#{option3},#{status})
-		
-	 </insert>
-	 <!-- DIVISION NUMBER : 1.디테일, 2.상세정보, 3.배너 -->
-	 <!-- 섬네일은 제일 첫번째 사진으로 -->
-	 <insert id="setProductFileAdd" parameterType="ProductFilesVO">
-	 INSERT INTO PRODUCTFILES (division_id,product_id,file_name,ori_name,step)
+
+	</insert>
+	<!-- DIVISION NUMBER : 1.디테일, 2.상세정보, 3.배너 -->
+	<!-- 섬네일은 제일 첫번째 사진으로 -->
+	<insert id="setProductFileAdd" parameterType="ProductFilesVO">
+		INSERT INTO PRODUCTFILES (division_id,product_id,file_name,ori_name,step)
 		VALUES(divisionId,productId,fileName,oriName,step)
-	 </insert>
-	 
-	 <!-- 카테고리 -->
-	 <select id="getCategoryList" resultType="CategoryVO">
-	 SELECT * from CATEGORY
-	 </select>
-	 <insert id="setCategoryInsert" parameterType="CategoryVO">
-	 INSERT INTO CATEGORY(parent_id,title) VALUES(#{parentId},#{title})
-	 </insert>
-  </mapper>
+	</insert>
+
+	<!-- 카테고리 -->
+	<!-- step 구분용 -->
+	<sql id="categoryStepSetting">
+		<where>
+			parent_id
+			<choose>
+				<when test="parentId>0">= #{parentId}</when>
+
+				<otherwise>
+					IS NULL
+				</otherwise>
+			</choose>
+		</where>
+	</sql>
+
+
+	<select id="getCategoryList" resultType="CategoryVO">
+		SELECT * from CATEGORY
+		order by parent_id ASC , step ASC	 <!-- LEVEL0부터 출력하기 위해 -->
+	</select>
+	<select id="getCategoryDetail" parameterType="CategoryVO"
+		resultType="CategoryVO">
+		SELECT * FROM CATEGORY WHERE id=#{id}
+	</select>
+	<insert id="setCategoryInsert" parameterType="CategoryVO">
+		<selectKey keyProperty="step" resultType="Long"
+			order="BEFORE">
+			SELECT COUNT(id)+1 AS step from CATEGORY
+			<include refid="categoryStepSetting"></include>
+		</selectKey>
+		INSERT INTO CATEGORY(parent_id,title,status,step)
+		VALUES(#{parentId},#{title},#{status},#{step})
+	</insert>
+	<delete id="setCategoryDelete" parameterType="CategoryVO">
+		delete from CATEGORY where
+		<choose>
+			<when test="parentId>0">parent_id= #{parentId}</when>
+			<otherwise>
+				id=#{id}
+			</otherwise>
+		</choose>
+	</delete>
+
+</mapper>

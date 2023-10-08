@@ -11,6 +11,7 @@ public class CategoryVO {
 	private Long id;
 	private Long parentId;
 	private String title;
-	
+	private Boolean status;
+	private Long step;
 	private List<CategoryVO> categoryVOs;
 }
