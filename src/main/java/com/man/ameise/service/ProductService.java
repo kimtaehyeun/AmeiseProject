@@ -37,5 +37,9 @@ public class ProductService {
 		}
 		return ar;
 	}
-	
+	public int setCategoryInsert(CategoryVO categoryVO)throws Exception{
+		categoryVO.setStatus(true);
+		categoryVO.setParentId(2L);
+		return productDAO.setCategoryInsert(categoryVO);
+	}
 }

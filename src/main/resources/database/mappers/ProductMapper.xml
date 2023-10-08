@@ -21,12 +21,31 @@
 	 </insert>
 	 
 	 <!-- 카테고리 -->
+	 <!-- step 구분용  -->
+	 <sql id="categoryStepSetting">
+		 <where>
+		 	parent_id
+			 <choose>
+				 <when test="parentId>0">= #{parentId}</when>
+				  
+				 <otherwise>
+				 	IS NULL
+				 </otherwise>
+			 </choose>
+		 </where>
+	 </sql>
+	 
+	 
 	 <select id="getCategoryList" resultType="CategoryVO">
 	 SELECT * from CATEGORY
-	 order by  parent_id ASC , step ASC
-	 <!-- LEVEL0부터 출력하기 위해 -->
+	 order by  parent_id ASC , step ASC	 <!-- LEVEL0부터 출력하기 위해 -->
 	 </select>
+	 
 	 <insert id="setCategoryInsert" parameterType="CategoryVO">
-	 INSERT INTO CATEGORY(parent_id,title,status,step) VALUES(#{parentId},#{title}#{status},#{step})
+		 <selectKey keyProperty="step" resultType="Long" order="BEFORE">
+		 SELECT COUNT(id)+1 AS step from CATEGORY 
+		 <include refid="categoryStepSetting"></include>
+		 </selectKey>
+	 INSERT INTO CATEGORY(parent_id,title,status,step) VALUES(#{parentId},#{title},#{status},#{step})
 	 </insert>
   </mapper>
