@@ -61,7 +61,7 @@
 																	<li class="categorys" data-id="${childVO.id }">
 																		<div class="ms-2 me-auto">
 																			<div class="fw-bold">${childVO.title }</div>
-
+ 
 																		</div>
 																	</li>
 																</c:forEach>
