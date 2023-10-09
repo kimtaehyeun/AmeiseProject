@@ -82,7 +82,10 @@
 
 									<button id="addCategoryBtn" class="btn btn-primary">대분류
 										추가</button>
-									<button id="deleteCategoryBtn" class="btn btn-danger">대분류삭제</button>
+									<button id="addChildCategoryBtn" class="btn btn-primary d-none">소분류
+										추가</button>
+									<button id="deleteCategoryBtn" class="btn btn-danger">선택
+										분류삭제</button>
 
 
 								</div>
@@ -93,8 +96,9 @@
 							<div class="card mb-4">
 								<div class="card-body">
 									<div class="mb-3">
-										<form id="categorySettingForm" action="/admin/setCategory" method="post">
-										<input type="hidden" id="categoryId">
+										<form id="categorySettingForm" action="/admin/setCategory"
+											method="post">
+											<input type="hidden" id="categoryId">
 											<div class="mb-3">
 												<label for="categorytitle" class="form-label">분류 명</label> <input
 													type="text" class="form-control" id="categorytitle">
@@ -105,9 +109,13 @@
 											</div>
 											<div class="form-check form-switch">
 												<label for="categorystatus" class="form-label">진열상태</label>
-												 <input class="form-check-input" type="checkbox" role="switch" id="categorystatus">
+												<input class="form-check-input" type="checkbox"
+													role="switch" id="categorystatus">
 											</div>
-											
+											<div class="mb-3">
+
+												<button class="btn btn-primary">수정하기</button>
+											</div>
 
 
 										</form>
