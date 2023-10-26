@@ -1,0 +1,534 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* 부모 요소의 옵션을 그대로 상속 */
+}
+
+/* font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 공용스타일 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner{
+    width: 1620px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    /* float 속성으로 인해 높이값을 인식 못할 경우 높이를 강제로 인식 */
+    content: ''; display: block; /* 가상클래스에 필수로 넣어야 하는 속성 */
+    clear: both;
+}
+
+
+/* header */
+header .inner{
+    height: 90px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.top{
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    z-index: 99;
+    transition: all .3s;
+}
+.top:hover{
+    background-color: #fff;
+    opacity: 0.8;
+}
+.nav{
+    display: flex;
+    cursor: pointer;
+}
+.nav .menu_btn span{
+    background: #000;
+    display: block;
+    width: 18px;
+    height: 3px;
+    margin-bottom: 5px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.nav .menu_btn{
+    margin-right: 10px;
+}
+.nav p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+.top_member{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.top_member li{
+    margin-right: 10px;
+}
+.top_member li:first-child{
+    margin-right: 15px;
+}
+.top_member li:last-child{
+    margin-right: 0;
+}
+
+
+/* .slide img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+} */
+
+.slide{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.slide > ul > li > a{
+    display: inline-block;
+    width: 100%;
+    height: 880px;
+    text-align: center;
+}
+
+.slide > ul > li > a > img{
+    position: relative;
+    left: 50%;
+    margin-left: -100%;
+}
+
+
+/* slide control */
+.slide .bx-pager{
+    position: absolute;
+    bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide .bx-pager-item{
+    display: inline-block;
+}
+
+.slide .bx-pager-item a{
+    display: block;
+    width: 15px; height: 15px;
+    background: #d0d0d0;
+    font-size: 0;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.slide .bx-pager-link.active{
+    background: #fff;
+}
+
+
+
+/* main */
+.main_section{
+    margin: 0 5%;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Verdana';
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 30px;
+    margin: 60px 0 50px;
+}
+
+
+.thumb_box{
+    display: inline-block;
+    font-size: 0;
+    width: 100%;
+    max-height: 620px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.thumb_box img{
+    width: 100%;
+    height: auto;
+    transition: transform .3s;
+}
+
+.thumb_box img:hover{
+    transform: scale(110%);
+    /* 100% 혹은 1이 원본 사이즈 */
+}
+
+.new_item > ul > li{
+    width: calc(100% / 3);
+}
+
+.des_box{
+    position: relative;
+    margin-top: 18px;
+}
+
+.name{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.price_box{
+    font-family: 'Verdana';
+    margin-bottom: 10px;
+}
+
+.price{
+    font-size: 20px;
+}
+
+.custom{
+    font-size: 16px;
+    color: #b9b9b9;
+    margin-left: 8px;
+    text-decoration: line-through;
+    /* 
+        text-decoration 속성값
+        none - 기본값(밑줄 없는 보통 글자)
+        underline - 글자 아래 밑줄
+        overline - 글자 위에 밑줄이 그어짐
+        line-through - 글자 중간에 줄이 그어짐
+     */
+}
+
+.sale{
+    color: #cc0000;
+}
+
+.review{
+    color: #5e5e5e;
+}
+
+.wishIcon{
+    position: absolute;
+    bottom: 50px; right: 10px;
+}
+
+.wishIcon a{
+    display: block;
+    width: 21px; height: 20px;
+    background: url("../images/wish_g.png") no-repeat;
+    transition: all .3s;
+}
+
+.wishIcon a:hover{
+    background: url("../images/wish_r.png") no-repeat;
+}
+
+.item_inner > ul > li{
+    float: left;
+}
+
+.box_inner{
+    position: relative;
+    padding: 0 12px;
+}
+
+.new_item .bx-controls .bx-pager{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.new_item .bx-pager-item{
+    display: inline-block;
+}
+
+.new_item .bx-pager-item a{
+    display: inline-block;
+    width: 13px; height: 13px;
+    background: #b3b3b3;
+    margin: 0 4px;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.new_item .bx-pager-item a.active{
+    background: #5e5e5e;
+}
+
+/* bestseller */
+.main_bestseller_section_inner > div{
+    width: 100%;
+    display: none;
+}
+
+.main_bestseller_section_inner{
+    text-align: center;
+}
+
+/* 탭 버튼 */
+.main_bestseller_section_inner input{
+    display: none;
+}
+
+.main_bestseller_section_inner label{
+    font-family: 'Verdana';
+    font-size: 20px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    display: inline-block;
+    cursor: pointer; /* 마우스 모양 변경 */
+    line-height: 37px;
+}
+
+.main_bestseller_section_inner label::after{
+    content: ''; display: block; /* after , before 가상클래스 필수 속성 */
+    width: 0; height: 3px;
+    background: #1a1a1a;
+    transition: all .3s;
+}
+
+#tab1:checked ~ .tab1,
+#tab2:checked ~ .tab2,
+#tab3:checked ~ .tab3,
+#tab4:checked ~ .tab4,
+#tab5:checked ~ .tab5,
+#tab6:checked ~ .tab6{
+    font-weight: bold;
+    letter-spacing: -0.09em;
+    /* 
+        letter-spacing: 자간
+        em - 글자 대비 간격
+        포토샵 작업한 자간 : 포토샵 자간 / 1000 em
+        예 : -25px 라면 -0.025em
+     */
+}
+
+#tab1:checked ~ .tab1::after,
+#tab2:checked ~ .tab2::after,
+#tab3:checked ~ .tab3::after,
+#tab4:checked ~ .tab4::after,
+#tab5:checked ~ .tab5::after
+#tab6:checked ~ .tab6::after{
+    width: 100%;
+}
+
+
+/* 탭 기능 구현 */
+#tab1:checked ~ #outer_box,
+#tab2:checked ~ #shirts_box,
+#tab3:checked ~ #Knit_box,
+#tab4:checked ~ #top_box,
+#tab5:checked ~ #bottom_box,
+#tab6:checked ~ #bag_box{
+    display: block;
+}
+
+
+.main_bestseller_section_inner .des_box{
+    text-align: left;
+}
+
+.rank{
+    display: inline-block;
+    font-family: 'Arial';
+    font-size: 22px;
+    background: #111;
+    width: 50px;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 0; left: 12px;
+    z-index: 50;
+}
+
+.tab_inner .box_inner{
+    position: relative;
+}
+
+.tab_inner > ul > li{
+    width: calc(100%/4);
+    margin-bottom: 60px;
+}
+
+
+.stylepick .thumb_box{
+    max-height: 818px;
+}
+
+
+.tab_inner > ul > li:nth-child(5n){
+    clear: both;
+}
+
+.tab_inner > ul > li:nth-child(5) .rank,
+.tab_inner > ul > li:nth-child(6) .rank,
+.tab_inner > ul > li:nth-child(7) .rank,
+.tab_inner > ul > li:nth-child(8) .rank{
+    background: #b5b5b5;
+}
+
+
+
+/* animation 효과 */
+@keyframes tabAni{
+    0%{opacity: .4; transform: translateY(130px);}
+    100%{opacity: 1;}
+}
+
+.tab_inner > ul > li:nth-child(1){
+    animation-name: tabAni;
+    animation-duration: .4s;
+}
+
+.tab_inner > ul > li:nth-child(2){
+    animation-name: tabAni;
+    animation-duration: .7s;
+}
+
+.tab_inner > ul > li:nth-child(3){
+    animation-name: tabAni;
+    animation-duration: 1.0s;
+}
+
+.tab_inner > ul > li:nth-child(4){
+    animation-name: tabAni;
+    animation-duration: 1.3s;
+}
+
+.tab_inner > ul > li:nth-child(5){
+    animation-name: tabAni;
+    animation-duration: 1.6s;
+}
+
+.tab_inner > ul > li:nth-child(6){
+    animation-name: tabAni;
+    animation-duration: 1.9s;
+}
+
+.tab_inner > ul > li:nth-child(7){
+    animation-name: tabAni;
+    animation-duration: 2.2s;
+}
+
+.tab_inner > ul > li:nth-child(8){
+    animation-name: tabAni;
+    animation-duration: 2.5s;
+}
+
+
+
+
+/* footer */
+footer{
+    margin-top: 60px;
+    border-top: 1px solid #999;
+}
+.bt{
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #555;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.bt_title{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.bt_info a:hover{
+    color: #999;
+    text-decoration: underline;
+    transition: all .3s;
+}
+
+.bt_sns a:hover{
+    color: #999;
+    transition: all .3s;
+}
+
+.bt_menu a:hover{
+    color: #999;
+    transition: all .3s;
+}
+
+.bt_copyright{
+    height: 100px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #111;
+    border-top: 1px solid #999;
+}
+.bt_copyright p{
+    margin-top: 20px;
+}

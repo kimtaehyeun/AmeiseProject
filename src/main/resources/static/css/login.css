@@ -1,0 +1,375 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* 부모 요소의 옵션을 그대로 상속 */
+}
+
+/* font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 공용스타일 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner{
+    width: 1620px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    /* float 속성으로 인해 높이값을 인식 못할 경우 높이를 강제로 인식 */
+    content: ''; display: block; /* 가상클래스에 필수로 넣어야 하는 속성 */
+    clear: both;
+}
+
+
+/* header */
+header{
+    height: 80px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+header .menubar{
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: #fff;
+    border-bottom: 1px solid #c0c0c0;
+}
+header .header_fix{
+    position: fixed !important;
+    top: 0; left: 0;
+    z-index: 99 !important;
+    background: #fff;
+    border-bottom: 1px solid #c0c0c0;
+}
+#headerInner{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+    transition: all .3s;
+}
+#headerInner:hover{
+    background-color: #fff;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.menu_btn{
+    padding-left: 20px;
+}
+
+.menu_btn .btn{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.menu_btn .btn:hover{
+    background: #eee;
+}
+
+.menu_btn .btn img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* sidebar */
+.sidebar{
+    position: fixed;
+    left: -240px;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    background: #fff;
+    z-index: 98;
+    overflow: hidden;
+    transition: all .5s;
+}
+.sidebar.view{
+    left: 0px;
+    overflow: visible;
+    border-right: 1px solid #c0c0c0;
+}
+.sidebar.click_btn{
+    display: none;
+}
+
+.sidebar .menu_btn{
+    height: 80px;
+    padding-top: 15px;
+}
+
+.sidebar_inner{
+    position: absolute;
+    padding: 20px;
+}
+
+/* logo */
+#logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* top_member */
+#top_member{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-right: 20px;
+}
+#top_member li{
+    margin-right: 10px;
+}
+#top_member li:first-child{
+    margin-right: 15px;
+}
+#top_member li:last-child{
+    margin-right: 0;
+}
+
+
+.mainmenu{
+    width: 200px;
+    border-bottom: 1px solid #c0c0c0;
+}
+.mainmenu li{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.mainmenu li:first-child{
+    color: #999;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.mainmenu li a{
+    border-radius: 30px;
+    padding: 5px 15px;
+    transition: all .2s;
+}
+.mainmenu li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+.other_menu{
+    margin-top: 25px;
+}
+.other_menu li{
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* main */
+main{
+    margin: 0 auto;
+}
+/* main .inner{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, .7);
+} */
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+}
+.login-form h1{
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 60px;
+}
+.int-area:first-child{
+    margin-top: 0;
+}
+.int-area{
+    width: 400px;
+    margin-top: 20px;
+    position: relative;
+}
+.int-area input{
+    width: 100%;
+    padding: 20px 0px 10px;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+}
+.int-area label{
+    position: absolute;
+    left: 10px; top: 15px;
+    font-size: 18px;
+    color: #999;
+}
+.int-area label.warning{
+    color: red !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+@keyframes warning{
+    0% {transform: translateX(-8px);}
+    25% {transform: translateX(8px);}
+    50% {transform: translateX(-8px);}
+    75% {transform: translateX(8px);}
+}
+.int-area input:focus + label,
+.int-area input:valid + label{
+    top: -2px;
+    font-size: 13px;
+    color: #000;
+}
+
+/* 로그인 버튼 */
+.btn_area{
+    margin-top: 30px;
+}
+.btn_area button{
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_kakao{
+    margin-top: 10px;
+    position: relative;
+}
+.btn_kakao a{
+    display: block;
+    width: 400px;
+    height: 50px;
+    background-color: #fee500;
+    color: #000;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.btn_kakao img{
+    position: absolute;
+    top: 50%; left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn_naver{
+    margin-top: 10px;
+    position: relative;
+}
+.btn_naver a{
+    display: block;
+    width: 400px;
+    height: 50px;
+    background-color: #26c826;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.btn_naver img{
+    position: absolute;
+    top: 50%; left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* utilmenu */
+.utilmenu{
+    width: 400px;
+    margin-top: 20px;
+}
+.utilmenu a{
+    font-size: 15px;
+    color: #999;
+    text-decoration: none;
+}
+.utilmenu a:nth-child(2){
+    color: #555;
+    float: right;
+}
