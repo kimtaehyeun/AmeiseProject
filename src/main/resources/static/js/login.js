@@ -2,6 +2,13 @@
     $(function(){
 
 
+        $(".menu_btn").click(function(){
+            $(".sidebar").toggleClass("view");
+            $(this).toggleClass("click_btn");
+            $("#headerInner").addClass("header_fix");
+        });
+        
+
         let id = $('#id');
         let pw = $('#pw');
         let btn = $('#btn');
