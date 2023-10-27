@@ -44,8 +44,8 @@
 			select
 			id from `MEMBER` where id=(SELECT MAX(id) from `MEMBER`)
 		</selectKey>
-	  insert into `MEMBER`(account_id,password,name,phone,marketing,join_type,reg_date,update_date,login_date,status,e_mail)
-	   VALUES(#{accountId},#{password},#{name},#{phone},#{marketing},#{joinType},now(),now(),now(),1,#{eMail})
+	  insert into `MEMBER`(account_id,password,name,birth_date,phone,marketing,join_type,reg_date,update_date,login_date,status,e_mail)
+	   VALUES(#{accountId},#{password},#{name},#{birthDate},#{phone},#{marketing},#{joinType},now(),now(),now(),1,#{eMail})
 	  </insert>
 	  <!-- member별 ROLE추가 -->
 	  <insert id="setMemberRole" parameterType="Map">

@@ -23,7 +23,7 @@ public class MemberVO implements UserDetails,OAuth2User{
 	private String accountId;
 	@NotBlank
 	private String password;
-	
+	private Timestamp birthDate;
 	@NotBlank
 	private String passwordCheck;
 	
