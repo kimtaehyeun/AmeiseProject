@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <!-- css -->
-        <link href="css/style.css" rel="stylesheet">
-        <!-- favicon (즐겨찾기 아이콘) 16px x 16px -->
-        <link rel="shortcut icon" href="images/favicon_eleven.png">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon_ameise.png">
 
         <!-- jQuery 연결 -->
         <script src="js/jquery-3.6.0.js"></script>
@@ -14,38 +14,60 @@
         <script src="js/jquery.scrollToGiveClass.js"></script>
         <script src="js/jquery.bxslider.js"></script>
         <script src="js/jquery.clickToGiveClass.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <!-- 플러그인 호출 -->
-        <script src="js/script.js"></script>
+        <script src="js/main.js"></script>
 
         <title>Ameise</title>
     </head>
     
     <body>
         <header>
-            <div class="top">
-                <div class="inner">
-                    <div class="nav">
+            <div id="headerInner">
+                <div class="menubar">
+                    <div class="menu_btn">
+                        <div class="btn"><img src="images/menu_icon.png" alt=""></div>
+                    </div> <!-- .menu_btn -->
+
+                    <div class="sidebar">
                         <div class="menu_btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <div class="btn"><img src="images/menu_icon.png" alt=""></div>
                         </div> <!-- .menu_btn -->
-                        <p>MENU</p>
-                    </div> <!-- .nav -->
 
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
-                    </div> <!-- .logo -->
+                        <div class="sidebar_inner">
+                            <ul class="mainmenu">
+                                <li>MENU</li>
+                                <li><a href="#none">BEST</a></li>
+                                <li><a href="#none">NEW</a></li>
+                                <li><a href="#none">OUTER</a></li>
+                                <li><a href="#none">SHIRTS</a></li>
+                                <li><a href="#none">KNIT</a></li>
+                                <li><a href="#none">TOP</a></li>
+                                <li><a href="#none">BOTTOM</a></li>
+                                <li><a href="#none">BAG</a></li>
+                            </ul> <!-- .mainmenu -->
 
-                    <ul class="top_member">
+                            <ul class="other_menu">
+                                <li><a href="#none">고객센터</a></li>
+                                <li><a href="#none">1:1문의</a></li>
+                                <li><a href="#none">Q&A</a></li>
+                            </ul> <!-- .other_menu -->
+                        </div> <!-- .sidebar_inner -->
+                    </div> <!-- .sidebar -->
+
+                    <div id="logo">
+                        <a href="main.html"><img src="images/logo.png" alt=""></a>
+                    </div> <!-- #logo -->
+
+                    <ul id="top_member">
                         <li><a href="login.html">LOGIN</a></li>
-                        <li><a href=""><img src="images/searchIcon.png" alt="검색"></a></li>
-                        <li><a href=""><img src="images/mypageIcon.png" alt="마이페이지"></a></li>
-                        <li><a href=""><img src="images/wishIcon.png" alt="관심상품"></a></li>
-                        <li><a href=""><img src="images/cartIcon.png" alt="장바구니"></a></li>
-                    </ul> <!-- .top_member -->
-                </div> <!-- .inner -->
-            </div> <!-- .top -->
+                        <li><a href="#none"><img src="images/searchIcon.png" alt="검색"></a></li>
+                        <li><a href="#none"><img src="images/mypageIcon.png" alt="마이페이지"></a></li>
+                        <li><a href="#none"><img src="images/wishIcon.png" alt="관심상품"></a></li>
+                        <li><a href="#none"><img src="images/cartIcon.png" alt="장바구니"></a></li>
+                    </ul> <!-- #top_member -->
+                </div> <!-- .menubar .inner -->
+            </div> <!-- #headerInner -->
 
             <div class="slide">
                 <ul>
@@ -57,7 +79,7 @@
 
         <main>
             <div class="inner">
-                <section class="main_new_item_section main_section">
+                <section id="main_newitem_section" class=" main_section">
                     <h3 class="title">NEW ITEM</h3>
     
                     <!-- 제품 진열 영역 -->
@@ -1482,7 +1504,7 @@
                         <p>상호명 Ameise</p>
                         <p>대표자 ○○○</p>
                         <p>개인정보 책임관리자 ○○○</p>
-                        <p>사업자 등록 번호 000-00-00000 <a href="">[사업자정보확인]</a></p>
+                        <p>사업자 등록 번호 000-00-00000 <a href="#none">[사업자정보확인]</a></p>
                         <p>통신판매신호번호 2023-서울강남-000호</p>
                         <p>주소 서울시 강남구</p>
                         <p>이메일 ameise@ameise.kr</p>
@@ -1503,16 +1525,16 @@
 
                     <div class="bt_sns">
                         <div class="bt_title">SNS</div> <!-- .bt_title -->
-                        <a href="">Instagram</a>
+                        <a href="#none">Instagram</a>
                     </div> <!-- .bt_sns -->
 
                     <div class="bt_menu">
                         <h1 class="bt_title">MENU</h1>
                         <ul>
-                            <li><a href="">회사소개</a></li>
-                            <li><a href="">이용약관</a></li>
-                            <li><a href="">개인정보처리방침</a></li>
-                            <li><a href="">이용안내</a></li>
+                            <li><a href="#none">회사소개</a></li>
+                            <li><a href="#none">이용약관</a></li>
+                            <li><a href="#none">개인정보처리방침</a></li>
+                            <li><a href="#none">이용안내</a></li>
                         </ul>
                     </div> <!-- .bt_sns -->
                 </div> <!-- .bt -->

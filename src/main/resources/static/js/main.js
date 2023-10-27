@@ -2,14 +2,6 @@
     $(function(){
 
 
-        // $('.slide > ul').slidy({
-        //     children: 'li',
-        //     animation: 'fade',
-        //     width: 2000,
-        //     height: 880
-        // });
-
-
         $('.slide > ul').bxSlider({
             auto : true, // 자동재생 : false (멈춤-기본값), true(자동재생)
             nextText : '',
@@ -17,11 +9,20 @@
         });
 
 
-        // $('#headerInner').scrollToGiveClass({
-        //     class: 'header_fix',
-        //     baseline: 90
-        // });
+        $('#headerInner').scrollToGiveClass({
+            class: 'header_fix',
+            baseline: 0
+        });
 
+
+        $(".menu_btn").click(function(){
+            $(".sidebar").toggleClass("view");
+            $(this).toggleClass("click_btn");
+            $("#headerInner").addClass("header_fix");
+        });
+
+
+        
         $('.new_item > ul').bxSlider({
             auto : true, // auto값은 항상 맨 위에 작성
             maxSlides : 3, // 한 화면에 동시에 보여질 슬라이드 수
@@ -32,12 +33,6 @@
             controls : false // prev, next 삭제학 싶으면 false 추가
             // pager : false - 페이저 버튼 삭제
         });
-
-
-        // $('.click_btn').clickToGiveClass({
-        //     class : 'view',
-        //     addTarget : '#headerInner, .layer_shadow'
-        // });
 
 
     });
