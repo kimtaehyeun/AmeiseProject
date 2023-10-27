@@ -2,8 +2,10 @@
  * 
  */
 
-console.log("Asdf")
+
+    
     let key = "";
+    alert("A")
     $("#sendMail").click(function() {// 메일 입력 유효성 검사
         console.log("Asdf")
         $.ajax({

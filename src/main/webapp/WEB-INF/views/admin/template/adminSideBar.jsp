@@ -25,7 +25,7 @@
 					aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 					<nav class="sb-sidenav-menu-nested nav">
 						<a class="nav-link" href="/admin/addProduct">상품등록</a> <a
-							class="nav-link" href="/admin/category">분류관리</a>
+							class="nav-link" href="/admin/setCategory">분류관리</a>
 					</nav>
 				</div>
 				<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"

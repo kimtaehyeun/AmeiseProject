@@ -1,6 +1,6 @@
 ;(function($){
     $(function(){
-
+        alert("Asdf");
 
         $(".menu_btn").click(function(){
             $(".sidebar").toggleClass("view");
@@ -11,6 +11,8 @@
 
         let id = $('#id');
         let pw = $('#pw');
+        
+        
         let btn = $('#btn');
 
         $(btn).on('click', function() {
