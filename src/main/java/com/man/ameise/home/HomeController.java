@@ -21,4 +21,9 @@ public class HomeController {
 		mv.setViewName("admin/home");
 		return mv;
 	}
+	@GetMapping("/boardGame")
+	public ModelAndView boardGame(ModelAndView mv)throws Exception{
+		mv.setViewName("boardGame");
+		return mv;
+	}
 }
